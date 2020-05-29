@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC59B2DE2481BC3900A86393 /* BlockUser.m in Sources */ = {isa = PBXBuildFile; fileRef = CC59B2DD2481BC3900A86393 /* BlockUser.m */; };
 		CCE5058E2480A73000F0D79E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE5058D2480A73000F0D79E /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CC59B2DC2481BC3900A86393 /* BlockUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockUser.h; sourceTree = "<group>"; };
+		CC59B2DD2481BC3900A86393 /* BlockUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockUser.m; sourceTree = "<group>"; };
 		CCE5058A2480A73000F0D79E /* objC101 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = objC101; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE5058D2480A73000F0D79E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				CCE5058D2480A73000F0D79E /* main.m */,
+				CC59B2DC2481BC3900A86393 /* BlockUser.h */,
+				CC59B2DD2481BC3900A86393 /* BlockUser.m */,
 			);
 			path = objC101;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC59B2DE2481BC3900A86393 /* BlockUser.m in Sources */,
 				CCE5058E2480A73000F0D79E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
