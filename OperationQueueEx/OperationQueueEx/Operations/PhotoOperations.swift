@@ -66,14 +66,10 @@ class ImageDownloader:Operation {
         
         if !imageData.isEmpty {
             self.photoRecord.updateImage(image: UIImage(data:imageData)!)
-            self.photoRecord.updateState(.downloaded)
-            //self.photoRecord.image = UIImage(data:imageData)
-            //self.photoRecord.state = .downloaded
+            self.photoRecord.updateState(.downloaded)            
         } else {
             self.photoRecord.updateImage(image: UIImage(named:"Failed")!)
             self.photoRecord.updateState(.failed)
-            //self.photoRecord.image = UIImage(named:"Failed")
-            //self.photoRecord.state = .failed
         }
     }
 }

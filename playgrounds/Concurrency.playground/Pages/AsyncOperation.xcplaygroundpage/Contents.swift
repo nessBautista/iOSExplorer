@@ -33,6 +33,7 @@ class AsyncOperation: Operation {
 //Operation Overrides
 extension AsyncOperation {
     override var isReady: Bool {
+        //it also needs to check if the Operation itself is ready
         return super.isReady && state == .Ready
     }
     
@@ -88,6 +89,7 @@ class SumOperation: AsyncOperation {
         callback(lhs + rhs)
       }
     }
+    
 }
 
 //Use the async operation

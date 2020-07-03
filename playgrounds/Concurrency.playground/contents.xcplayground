@@ -3,6 +3,6 @@
     <pages>
         <page name='DispatchQueues'/>
         <page name='AsyncOperation'/>
-        <page name='Operations'/>
+        <page name='BlockOperations'/>
     </pages>
 </playground>
