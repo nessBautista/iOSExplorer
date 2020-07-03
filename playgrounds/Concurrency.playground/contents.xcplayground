@@ -4,5 +4,6 @@
         <page name='DispatchQueues'/>
         <page name='AsyncOperation'/>
         <page name='BlockOperations'/>
+        <page name='Complex_SynchronousOperation_TiltFilter'/>
     </pages>
 </playground>

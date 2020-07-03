@@ -24,6 +24,9 @@ result
 // TODO: Create and run multiPrinter
 
 let multiPrinter = BlockOperation()
+multiPrinter.completionBlock = {
+    print("finished multiPrinting")
+}
 multiPrinter.addExecutionBlock {print("Hello"); sleep(2)}
 multiPrinter.addExecutionBlock {print("How"); sleep(2)}
 multiPrinter.addExecutionBlock {print("are"); sleep(2)}
