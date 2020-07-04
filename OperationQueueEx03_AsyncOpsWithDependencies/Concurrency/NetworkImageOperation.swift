@@ -34,6 +34,7 @@ import UIKit
 
 final class NetworkImageOperation: AsyncOperation {
   var image: UIImage?
+  private var task: URLSessionDataTask?
 
   private let url: URL
   private let completionHandler: ((Data?, URLResponse?, Error?) -> Void)?
@@ -51,13 +52,19 @@ final class NetworkImageOperation: AsyncOperation {
   }
 
   override func main() {
-    URLSession.shared.dataTask(with: url) { [weak self]
+    self.task = URLSession.shared.dataTask(with: url) { [weak self]
       data, response, error in
 
       guard let self = self else { return }
 
       defer { self.state = .finished }
-
+      //Check if the operation hasn't been cancel while performing the network call
+      guard self.isCancelled == false else {
+        //you already download the image
+        //you may store it to avoid any waste bandwidth and user's data
+        print(">>>>>>NetworkImageOperation Cancelled: Do something here")
+        return
+      }
       if let completionHandler = self.completionHandler {
         completionHandler(data, response, error)
         return
@@ -66,7 +73,13 @@ final class NetworkImageOperation: AsyncOperation {
       guard error == nil, let data = data else { return }
 
       self.image = UIImage(data: data)
-    }.resume()
+    }
+    self.task?.resume()
+  }
+  
+  override func cancel() {
+    super.cancel()
+    self.task?.cancel()
   }
 }
 
