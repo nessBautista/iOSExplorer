@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ImageTableViewCell" rowHeight="320" id="7uD-EA-10e" customClass="ImageTableViewCell" customModule="OperationQueueEx02_AsyncOpsWithDependencies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7uD-EA-10e" id="m2o-cR-DvJ">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iKp-DJ-RAP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXo-KN-MTK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MlA-k3-0BX">
+                                <rect key="frame" x="0.0" y="260" width="414" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="xJz-FE-mrE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="BGp-Pg-11Y">
+                                <rect key="frame" x="122" y="120" width="170" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BGp-Pg-11Y" firstAttribute="top" secondItem="MXo-KN-MTK" secondAttribute="top" constant="120" id="B2Q-45-xDD"/>
+                            <constraint firstAttribute="trailing" secondItem="MlA-k3-0BX" secondAttribute="trailing" id="ZWm-7g-xdJ"/>
+                            <constraint firstItem="MlA-k3-0BX" firstAttribute="leading" secondItem="MXo-KN-MTK" secondAttribute="leading" id="iSR-Xb-Hf9"/>
+                            <constraint firstAttribute="bottom" secondItem="MlA-k3-0BX" secondAttribute="bottom" id="lSd-Jx-u4j"/>
+                            <constraint firstItem="BGp-Pg-11Y" firstAttribute="leading" secondItem="MXo-KN-MTK" secondAttribute="leading" constant="122" id="tgT-dd-7aa"/>
+                            <constraint firstAttribute="trailing" secondItem="BGp-Pg-11Y" secondAttribute="trailing" constant="122" id="xKx-Np-0eX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="MXo-KN-MTK" secondAttribute="trailing" id="02H-ez-YSe"/>
+                    <constraint firstItem="iKp-DJ-RAP" firstAttribute="leading" secondItem="m2o-cR-DvJ" secondAttribute="leading" id="0Pn-RW-hQt"/>
+                    <constraint firstItem="iKp-DJ-RAP" firstAttribute="top" secondItem="m2o-cR-DvJ" secondAttribute="top" id="0eJ-8s-1ZH"/>
+                    <constraint firstItem="MXo-KN-MTK" firstAttribute="leading" secondItem="m2o-cR-DvJ" secondAttribute="leading" id="4ac-v6-IBm"/>
+                    <constraint firstAttribute="bottom" secondItem="MXo-KN-MTK" secondAttribute="bottom" id="b2t-Pj-BSB"/>
+                    <constraint firstAttribute="bottom" secondItem="iKp-DJ-RAP" secondAttribute="bottom" constant="60" id="bBi-ps-C8T"/>
+                    <constraint firstItem="MXo-KN-MTK" firstAttribute="top" secondItem="m2o-cR-DvJ" secondAttribute="top" id="eO7-u2-tug"/>
+                    <constraint firstAttribute="trailing" secondItem="iKp-DJ-RAP" secondAttribute="trailing" id="fAi-PR-irF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="activityIndicator" destination="BGp-Pg-11Y" id="evL-Gq-qFD"/>
+                <outlet property="titleLabel" destination="MlA-k3-0BX" id="X1m-bo-pZZ"/>
+                <outlet property="tsImageView" destination="iKp-DJ-RAP" id="8a2-6e-LpU"/>
+            </connections>
+            <point key="canvasLocation" x="-17.39130434782609" y="81.696428571428569"/>
+        </tableViewCell>
+    </objects>
+</document>
