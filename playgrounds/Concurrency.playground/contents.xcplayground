@@ -3,8 +3,10 @@
     <pages>
         <page name='DispatchQueues'/>
         <page name='AsyncOperation'/>
-        <page name='BlockOperations'/>
         <page name='Complex_SynchronousOperation_TiltFilter'/>
         <page name='Exploring OperationQueues'/>
+        <page name='Exploring BlockOperations'/>
+        <page name='OperationQueues_ImageProcessingAndUpdateArray'/>
+        <page name='DispatchQueues02'/>
     </pages>
 </playground>
