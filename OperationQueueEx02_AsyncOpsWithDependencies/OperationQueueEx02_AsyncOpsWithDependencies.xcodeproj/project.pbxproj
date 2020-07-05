@@ -34,6 +34,12 @@
 		CC47A9A724B122EB00A57358 /* sample_07_small.compressed in Resources */ = {isa = PBXBuildFile; fileRef = CC47A98624B10B8800A57358 /* sample_07_small.compressed */; };
 		CC47A9A824B122EB00A57358 /* sample_08_small.compressed in Resources */ = {isa = PBXBuildFile; fileRef = CC47A98324B10B8800A57358 /* sample_08_small.compressed */; };
 		CC47A9A924B122EB00A57358 /* sample_09_small.compressed in Resources */ = {isa = PBXBuildFile; fileRef = CC47A98524B10B8800A57358 /* sample_09_small.compressed */; };
+		CC47A9AB24B1379D00A57358 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC47A9AA24B1379D00A57358 /* AsyncOperation.swift */; };
+		CC47A9AF24B1384600A57358 /* ImageFilterOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC47A9AE24B1384600A57358 /* ImageFilterOperation.swift */; };
+		CC47A9B224B1565E00A57358 /* DataLoadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC47A9B124B1565E00A57358 /* DataLoadOperation.swift */; };
+		CC47A9B424B156C700A57358 /* ImageDecompressionOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC47A9B324B156C700A57358 /* ImageDecompressionOperation.swift */; };
+		CC47A9B624B167D500A57358 /* TiltShiftOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC47A9B524B167D500A57358 /* TiltShiftOperation.swift */; };
+		CC47A9B824B1694D00A57358 /* ImageFilterOutputOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC47A9B724B1694D00A57358 /* ImageFilterOutputOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +72,12 @@
 		CC47A99724B10C1900A57358 /* NSData+Compression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Compression.swift"; sourceTree = "<group>"; };
 		CC47A99D24B10D9100A57358 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		CC47A99E24B10D9100A57358 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		CC47A9AA24B1379D00A57358 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
+		CC47A9AE24B1384600A57358 /* ImageFilterOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFilterOperation.swift; sourceTree = "<group>"; };
+		CC47A9B124B1565E00A57358 /* DataLoadOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadOperation.swift; sourceTree = "<group>"; };
+		CC47A9B324B156C700A57358 /* ImageDecompressionOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDecompressionOperation.swift; sourceTree = "<group>"; };
+		CC47A9B524B167D500A57358 /* TiltShiftOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiltShiftOperation.swift; sourceTree = "<group>"; };
+		CC47A9B724B1694D00A57358 /* ImageFilterOutputOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFilterOutputOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,8 +187,22 @@
 		CC47A99C24B10D1800A57358 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
+				CC47A9B024B1563800A57358 /* Abstract */,
+				CC47A9B124B1565E00A57358 /* DataLoadOperation.swift */,
+				CC47A9B324B156C700A57358 /* ImageDecompressionOperation.swift */,
+				CC47A9B524B167D500A57358 /* TiltShiftOperation.swift */,
+				CC47A9B724B1694D00A57358 /* ImageFilterOutputOperation.swift */,
 			);
 			path = Operations;
+			sourceTree = "<group>";
+		};
+		CC47A9B024B1563800A57358 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				CC47A9AA24B1379D00A57358 /* AsyncOperation.swift */,
+				CC47A9AE24B1384600A57358 /* ImageFilterOperation.swift */,
+			);
+			path = Abstract;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,16 +288,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC47A96724B103EC00A57358 /* ViewController.swift in Sources */,
+				CC47A9B424B156C700A57358 /* ImageDecompressionOperation.swift in Sources */,
+				CC47A9AB24B1379D00A57358 /* AsyncOperation.swift in Sources */,
 				CC47A99424B10C0800A57358 /* PostProcess.swift in Sources */,
 				CC47A97F24B10B2100A57358 /* TiltShiftImageProvider.swift in Sources */,
 				CC47A99324B10C0800A57358 /* UIImageExtensions.swift in Sources */,
+				CC47A9AF24B1384600A57358 /* ImageFilterOperation.swift in Sources */,
 				CC47A99524B10C0800A57358 /* GradientGenerator.swift in Sources */,
 				CC47A99924B10C1900A57358 /* NSData+Compression.swift in Sources */,
 				CC47A97E24B10B2100A57358 /* TiltShiftImage.swift in Sources */,
 				CC47A98F24B10BEB00A57358 /* NetworkSimulator.swift in Sources */,
 				CC47A97924B10AB700A57358 /* TiltShiftTableViewController.swift in Sources */,
 				CC47A99F24B10D9100A57358 /* ImageTableViewCell.swift in Sources */,
+				CC47A9B224B1565E00A57358 /* DataLoadOperation.swift in Sources */,
+				CC47A9B624B167D500A57358 /* TiltShiftOperation.swift in Sources */,
 				CC47A99824B10C1900A57358 /* Compressor.swift in Sources */,
+				CC47A9B824B1694D00A57358 /* ImageFilterOutputOperation.swift in Sources */,
 				CC47A96324B103EC00A57358 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

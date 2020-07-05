@@ -23,24 +23,33 @@
 import UIKit
 
 class TiltShiftImageProvider {
-  
-  let tiltShiftImage: TiltShiftImage
-  
-  init(tiltShiftImage: TiltShiftImage) {
-    self.tiltShiftImage = tiltShiftImage
-  }
-  
-  var image: UIImage? {
-    let url = Bundle.main.url(forResource: tiltShiftImage.imageName, withExtension: "compressed")!
     
-    guard let rawData = NetworkSimulator.syncLoadDataAtURL(url),
-      let decompressedData = Compressor.decompressData(rawData),
-      let inputImage = UIImage(data: decompressedData) else { return .none }
+    let tiltShiftImage: TiltShiftImage
+    let operationQueue:OperationQueue = OperationQueue()
+    init(tiltShiftImage: TiltShiftImage, completion:@escaping(UIImage?)->()) {
+        self.tiltShiftImage = tiltShiftImage
+        
+        let url = Bundle.main.url(forResource: tiltShiftImage.imageName, withExtension: "compressed")!
+        
+        //Create operations
+        let dataOperation = DataLoadOperation(url: url)
+        let decompressionOperation = ImageDecompressionOperation(data: nil)
+        let tilshiftOperation = TiltShiftOperation(image: nil)
+        let outputOperation = ImageFilterOutputOperation(completion: completion)
+        
+        //setDependencies
+        let operations = [dataOperation, decompressionOperation,tilshiftOperation,outputOperation]
+        decompressionOperation.addDependency(dataOperation)
+        tilshiftOperation.addDependency(decompressionOperation)
+        outputOperation.addDependency(tilshiftOperation)
+        
+        
+        operationQueue.addOperations(operations, waitUntilFinished: false)
+    }
     
-    let mask = topAndBottomGradient(inputImage.size)
-    return inputImage.applyBlurWithRadius(5, maskImage: mask)
-  }
-  
+    func cancel(){
+        self.operationQueue.cancelAllOperations()
+    }
 }
 
 extension TiltShiftImageProvider: Hashable {
