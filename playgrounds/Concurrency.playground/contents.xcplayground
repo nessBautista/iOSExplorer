@@ -12,5 +12,7 @@
         <page name='CreateAsyncFunctions'/>
         <page name='DispatchGroups01_createAndNotify'/>
         <page name='DispatchGroup02_waiting'/>
+        <page name='DispatchGroup03_wrapAsyncFuncInto'/>
+        <page name='DispatchGroup04_DownloadGroupOfImages'/>
     </pages>
 </playground>
