@@ -10,5 +10,7 @@
         <page name='DispatchQueues02'/>
         <page name='DispatchWorkItem01_explore'/>
         <page name='CreateAsyncFunctions'/>
+        <page name='DispatchGroups01_createAndNotify'/>
+        <page name='DispatchGroup02_waiting'/>
     </pages>
 </playground>
