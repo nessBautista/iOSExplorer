@@ -9,5 +9,6 @@
         <page name='OperationQueues_ImageProcessingAndUpdateArray'/>
         <page name='DispatchQueues02'/>
         <page name='DispatchWorkItem01_explore'/>
+        <page name='CreateAsyncFunctions'/>
     </pages>
 </playground>
