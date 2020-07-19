@@ -12,6 +12,7 @@
 		CC16DF0224B4D4760070A366 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC16DF0024B4D4760070A366 /* Main.storyboard */; };
 		CC16DF0424B4D47A0070A366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC16DF0324B4D47A0070A366 /* Assets.xcassets */; };
 		CC16DF0724B4D47A0070A366 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC16DF0524B4D47A0070A366 /* LaunchScreen.storyboard */; };
+		CC26409024BB7E8800567B0F /* Pods_UnsplashClient.framework in Sources */ = {isa = PBXBuildFile; fileRef = 4DB4C7DEABF384738D6CC280 /* Pods_UnsplashClient.framework */; };
 		CC6936AB24B4EE0F00229B44 /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6936AA24B4EE0F00229B44 /* EndpointType.swift */; };
 		CC6936AE24B5040300229B44 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6936AD24B5040300229B44 /* ParameterEncoding.swift */; };
 		CC6936B024B505EC00229B44 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6936AF24B505EC00229B44 /* URLParameterEncoder.swift */; };
@@ -29,15 +30,31 @@
 		CC6936CC24B55A2500229B44 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6936CA24B55A2500229B44 /* PhotoDetailViewController.swift */; };
 		CC6936CD24B55A2500229B44 /* PhotoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC6936CB24B55A2500229B44 /* PhotoDetailViewController.xib */; };
 		CC6936CF24B55CA900229B44 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6936CE24B55CA900229B44 /* MainTabBarController.swift */; };
+		CC72065624B8DA1C00D28C22 /* TestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC72065524B8DA1C00D28C22 /* TestClient.swift */; };
 		CC88890324B637AB008A0DC1 /* HomeUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88890224B637AB008A0DC1 /* HomeUseCases.swift */; };
 		CC88890724B63CC4008A0DC1 /* HomePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC88890524B63CC4008A0DC1 /* HomePhotoCell.swift */; };
 		CC88890824B63CC4008A0DC1 /* HomePhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC88890624B63CC4008A0DC1 /* HomePhotoCell.xib */; };
+		CC9FD2C124BAA5F400862F44 /* UnsplashClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9FD2C024BAA5F400862F44 /* UnsplashClientUITests.swift */; };
 		CCD8D1FF24B560FA0079CF3E /* RouterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD8D1FE24B560FA0079CF3E /* RouterCoordinator.swift */; };
 		CCD8D20124B565690079CF3E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD8D20024B565690079CF3E /* HomePresenter.swift */; };
 		CCDFD7EB24B7758D007B1519 /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFD7EA24B7758D007B1519 /* AsyncOperation.swift */; };
 		CCDFD7ED24B77909007B1519 /* ImageDownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFD7EC24B77909007B1519 /* ImageDownloadOperation.swift */; };
+		CCDFD7F024B7CD21007B1519 /* ActionTaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFD7EF24B7CD21007B1519 /* ActionTaps.swift */; };
+		CCDFD7F224B805AA007B1519 /* AppClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFD7F124B805AA007B1519 /* AppClient.swift */; };
+		CCDFD7F524B81221007B1519 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFD7F324B81221007B1519 /* LoginViewController.swift */; };
+		CCDFD7F624B81221007B1519 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDFD7F424B81221007B1519 /* LoginViewController.xib */; };
 		DBF3CAB80850C4155E737B7B /* Pods_UnsplashClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB4C7DEABF384738D6CC280 /* Pods_UnsplashClient.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC9FD2C324BAA5F400862F44 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC16DEEF24B4D4760070A366 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC16DEF624B4D4760070A366;
+			remoteInfo = UnsplashClient;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		203C4C6E8E368016B4CB1BF9 /* Pods-UnsplashClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnsplashClient.debug.xcconfig"; path = "Target Support Files/Pods-UnsplashClient/Pods-UnsplashClient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,13 +84,21 @@
 		CC6936CA24B55A2500229B44 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		CC6936CB24B55A2500229B44 /* PhotoDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoDetailViewController.xib; sourceTree = "<group>"; };
 		CC6936CE24B55CA900229B44 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		CC72065524B8DA1C00D28C22 /* TestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClient.swift; sourceTree = "<group>"; };
 		CC88890224B637AB008A0DC1 /* HomeUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCases.swift; sourceTree = "<group>"; };
 		CC88890524B63CC4008A0DC1 /* HomePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePhotoCell.swift; sourceTree = "<group>"; };
 		CC88890624B63CC4008A0DC1 /* HomePhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePhotoCell.xib; sourceTree = "<group>"; };
+		CC9FD2BE24BAA5F400862F44 /* UnsplashClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnsplashClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC9FD2C024BAA5F400862F44 /* UnsplashClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashClientUITests.swift; sourceTree = "<group>"; };
+		CC9FD2C224BAA5F400862F44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCD8D1FE24B560FA0079CF3E /* RouterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterCoordinator.swift; sourceTree = "<group>"; };
 		CCD8D20024B565690079CF3E /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		CCDFD7EA24B7758D007B1519 /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
 		CCDFD7EC24B77909007B1519 /* ImageDownloadOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadOperation.swift; sourceTree = "<group>"; };
+		CCDFD7EF24B7CD21007B1519 /* ActionTaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionTaps.swift; sourceTree = "<group>"; };
+		CCDFD7F124B805AA007B1519 /* AppClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClient.swift; sourceTree = "<group>"; };
+		CCDFD7F324B81221007B1519 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CCDFD7F424B81221007B1519 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +107,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBF3CAB80850C4155E737B7B /* Pods_UnsplashClient.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9FD2BB24BAA5F400862F44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				CC16DEF924B4D4760070A366 /* UnsplashClient */,
+				CC9FD2BF24BAA5F400862F44 /* UnsplashClientUITests */,
 				CC16DEF824B4D4760070A366 /* Products */,
 				F9632B24EACAB5E05D3AD113 /* Pods */,
 				63E025CA1BBB8BA34CF55F37 /* Frameworks */,
@@ -110,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				CC16DEF724B4D4760070A366 /* UnsplashClient.app */,
+				CC9FD2BE24BAA5F400862F44 /* UnsplashClientUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,6 +165,7 @@
 				CC16DF0324B4D47A0070A366 /* Assets.xcassets */,
 				CC16DF0524B4D47A0070A366 /* LaunchScreen.storyboard */,
 				CC16DF0824B4D47A0070A366 /* Info.plist */,
+				CCDFD7F124B805AA007B1519 /* AppClient.swift */,
 			);
 			path = UnsplashClient;
 			sourceTree = "<group>";
@@ -146,6 +181,8 @@
 				CC6936CA24B55A2500229B44 /* PhotoDetailViewController.swift */,
 				CC6936CB24B55A2500229B44 /* PhotoDetailViewController.xib */,
 				CC6936CE24B55CA900229B44 /* MainTabBarController.swift */,
+				CCDFD7F324B81221007B1519 /* LoginViewController.swift */,
+				CCDFD7F424B81221007B1519 /* LoginViewController.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -196,6 +233,7 @@
 		CC6936A424B4E6B600229B44 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				CCDFD7EE24B7CD09007B1519 /* Gestures */,
 				CC6936A524B4E6C100229B44 /* Operations */,
 			);
 			path = Utilities;
@@ -224,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				CC6936B724B50CC700229B44 /* UnsplashClient.swift */,
+				CC72065524B8DA1C00D28C22 /* TestClient.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -245,6 +284,23 @@
 				CC88890624B63CC4008A0DC1 /* HomePhotoCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		CC9FD2BF24BAA5F400862F44 /* UnsplashClientUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC9FD2C024BAA5F400862F44 /* UnsplashClientUITests.swift */,
+				CC9FD2C224BAA5F400862F44 /* Info.plist */,
+			);
+			path = UnsplashClientUITests;
+			sourceTree = "<group>";
+		};
+		CCDFD7EE24B7CD09007B1519 /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				CCDFD7EF24B7CD21007B1519 /* ActionTaps.swift */,
+			);
+			path = Gestures;
 			sourceTree = "<group>";
 		};
 		F9632B24EACAB5E05D3AD113 /* Pods */ = {
@@ -278,6 +334,24 @@
 			productReference = CC16DEF724B4D4760070A366 /* UnsplashClient.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CC9FD2BD24BAA5F400862F44 /* UnsplashClientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC9FD2C724BAA5F400862F44 /* Build configuration list for PBXNativeTarget "UnsplashClientUITests" */;
+			buildPhases = (
+				CC9FD2BA24BAA5F400862F44 /* Sources */,
+				CC9FD2BB24BAA5F400862F44 /* Frameworks */,
+				CC9FD2BC24BAA5F400862F44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC9FD2C424BAA5F400862F44 /* PBXTargetDependency */,
+			);
+			name = UnsplashClientUITests;
+			productName = UnsplashClientUITests;
+			productReference = CC9FD2BE24BAA5F400862F44 /* UnsplashClientUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -290,6 +364,10 @@
 				TargetAttributes = {
 					CC16DEF624B4D4760070A366 = {
 						CreatedOnToolsVersion = 11.3;
+					};
+					CC9FD2BD24BAA5F400862F44 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = CC16DEF624B4D4760070A366;
 					};
 				};
 			};
@@ -307,6 +385,7 @@
 			projectRoot = "";
 			targets = (
 				CC16DEF624B4D4760070A366 /* UnsplashClient */,
+				CC9FD2BD24BAA5F400862F44 /* UnsplashClientUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -316,6 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCDFD7F624B81221007B1519 /* LoginViewController.xib in Resources */,
 				CC6936C524B557C100229B44 /* HomeTableViewController.xib in Resources */,
 				CC88890824B63CC4008A0DC1 /* HomePhotoCell.xib in Resources */,
 				CC16DF0724B4D47A0070A366 /* LaunchScreen.storyboard in Resources */,
@@ -323,6 +403,13 @@
 				CC16DF0424B4D47A0070A366 /* Assets.xcassets in Resources */,
 				CC16DF0224B4D4760070A366 /* Main.storyboard in Resources */,
 				CC6936C924B55A1000229B44 /* CollectionListViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC9FD2BC24BAA5F400862F44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,15 +470,19 @@
 				CCDFD7ED24B77909007B1519 /* ImageDownloadOperation.swift in Sources */,
 				CC6936C424B557C100229B44 /* HomeTableViewController.swift in Sources */,
 				CC6936CC24B55A2500229B44 /* PhotoDetailViewController.swift in Sources */,
+				CC72065624B8DA1C00D28C22 /* TestClient.swift in Sources */,
 				CC88890324B637AB008A0DC1 /* HomeUseCases.swift in Sources */,
 				CC6936B824B50CC700229B44 /* UnsplashClient.swift in Sources */,
 				CC6936C124B51CDF00229B44 /* DependencyRegister.swift in Sources */,
 				CCD8D1FF24B560FA0079CF3E /* RouterCoordinator.swift in Sources */,
 				CC6936BB24B515AD00229B44 /* Photo.swift in Sources */,
+				CCDFD7F524B81221007B1519 /* LoginViewController.swift in Sources */,
 				CC6936B024B505EC00229B44 /* URLParameterEncoder.swift in Sources */,
+				CCDFD7F024B7CD21007B1519 /* ActionTaps.swift in Sources */,
 				CCDFD7EB24B7758D007B1519 /* AsyncOperation.swift in Sources */,
 				CC88890724B63CC4008A0DC1 /* HomePhotoCell.swift in Sources */,
 				CC6936AE24B5040300229B44 /* ParameterEncoding.swift in Sources */,
+				CCDFD7F224B805AA007B1519 /* AppClient.swift in Sources */,
 				CC16DEFB24B4D4760070A366 /* AppDelegate.swift in Sources */,
 				CCD8D20124B565690079CF3E /* HomePresenter.swift in Sources */,
 				CC6936B224B5060600229B44 /* JSONParameterEncoder.swift in Sources */,
@@ -400,7 +491,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CC9FD2BA24BAA5F400862F44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC26409024BB7E8800567B0F /* Pods_UnsplashClient.framework in Sources */,
+				CC9FD2C124BAA5F400862F44 /* UnsplashClientUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC9FD2C424BAA5F400862F44 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC16DEF624B4D4760070A366 /* UnsplashClient */;
+			targetProxy = CC9FD2C324BAA5F400862F44 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CC16DF0024B4D4760070A366 /* Main.storyboard */ = {
@@ -574,6 +682,44 @@
 			};
 			name = Release;
 		};
+		CC9FD2C524BAA5F400862F44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQGZN6D9K9;
+				INFOPLIST_FILE = UnsplashClientUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nesslab.test.UnsplashClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UnsplashClient;
+			};
+			name = Debug;
+		};
+		CC9FD2C624BAA5F400862F44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQGZN6D9K9;
+				INFOPLIST_FILE = UnsplashClientUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nesslab.test.UnsplashClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = UnsplashClient;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -591,6 +737,15 @@
 			buildConfigurations = (
 				CC16DF0C24B4D47A0070A366 /* Debug */,
 				CC16DF0D24B4D47A0070A366 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC9FD2C724BAA5F400862F44 /* Build configuration list for PBXNativeTarget "UnsplashClientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC9FD2C524BAA5F400862F44 /* Debug */,
+				CC9FD2C624BAA5F400862F44 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

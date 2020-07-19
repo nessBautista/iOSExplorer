@@ -53,6 +53,7 @@ final class DependencyRegister{
             let home = HomeTableViewController(nibName: "HomeTableViewController", bundle: nil)
             let router = self.makeRouteCoordinator(rootVC: home)
             let homePresenter = r.resolve(HomePresenterProtocol.self)!
+            homePresenter.delegate = home
             //let router = r.resolve(RouterCoordinator.self, argument: home)!
             home.config(router: router, homePresenter:homePresenter)
             return home

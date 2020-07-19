@@ -10,21 +10,33 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
         
+    private var pendingSearchTask:DispatchWorkItem?
+    @IBOutlet weak var searchBar: UISearchBar!
     var router:RouterCoordinator?
     var homePresenter:HomePresenterProtocol?
-    
+    var onDidTapLike:((PhotoVM)->())?
     func config(router:RouterCoordinator, homePresenter:HomePresenterProtocol){
         self.router = router
         self.homePresenter = homePresenter
-        self.homePresenter?.delegate = self
+        //self.homePresenter?.delegate = self
         self.tableView.register(UINib(nibName: "HomePhotoCell", bundle: nil), forCellReuseIdentifier: "HomePhotoCell")
-        self.tableView.rowHeight = 120
+        self.tableView.rowHeight = 350
         self.tableView.prefetchDataSource = self
+        self.searchBar.delegate = self
+        self.onDidTapLike = { photo in
+            print("Got the photo:\(photo.user.username)")
+            self.homePresenter?.likePhoto(id: photo.id, onCompletion: { (response) in
+                print(response)
+            })
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.homePresenter?.loadFeed()
+        self.homePresenter?.loadFeed(isSearching: false)
+        //Testing Post method
+        //let client = TestClient()
+        //client.testPost(userName: "GlazzingFox", tweet: "HelloWorld!")
     }
 
     // MARK: - Table view data source
@@ -46,6 +58,7 @@ class HomeTableViewController: UITableViewController {
         } else {
             cell?.load(self.homePresenter?.getPhoto(at:indexPath))
         }
+        cell?.onDidTapLike = onDidTapLike
         return cell ?? UITableViewCell()
     }
 
@@ -66,7 +79,7 @@ private extension HomeTableViewController{
 extension HomeTableViewController:UITableViewDataSourcePrefetching{
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
       if indexPaths.contains(where: isLoadingCell) {
-        homePresenter?.loadFeed()
+        homePresenter?.loadFeed(isSearching: self.searchBar.text?.isEmpty == false)
       }
     }
     
@@ -99,9 +112,29 @@ extension HomeTableViewController:HomePresenterDelegate{
     
     func didLoadImage(for indexPath: IndexPath) {
         if let cell = self.tableView.cellForRow(at: indexPath) as? HomePhotoCell,
-            let image = self.homePresenter?.photos[indexPath.row].thumbImg {
-            cell.imgThumb.image = image
+            let photo = self.homePresenter?.photos[indexPath.row] {
+            cell.load(photo)
         }
     }
 }
 
+extension HomeTableViewController: UISearchBarDelegate{
+        
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {        
+        guard searchText.isEmpty == false else {return}
+        self.pendingSearchTask?.cancel()
+        
+        let searchTask = DispatchWorkItem {
+            self.searchFor(searchText)
+        }
+        self.pendingSearchTask = searchTask
+        DispatchQueue.global(qos: .userInitiated).asyncAfter(deadline: .now() + .milliseconds(500), execute: searchTask)
+            
+            
+    }
+    
+    fileprivate func searchFor(_ searchText:String){
+        print("Looking for term:\(searchText)")
+        self.homePresenter?.startSearchingPhoto(query: searchText)
+    }
+}

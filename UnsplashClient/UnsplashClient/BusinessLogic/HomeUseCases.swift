@@ -10,9 +10,10 @@ import Foundation
 
 protocol HomeUseCasesProtocol{
     var unsplashClient:UnsplashClient {get}
-    func loadFeed(page:Int,onCompletion: @escaping(([PhotoVM]?, String?) -> Void)) 
-    func searchPhoto(searchWord:String)
+    func loadFeed(page:Int,onCompletion: @escaping(([PhotoVM]?, String?) -> Void))
     func getPhotoDetail(id:String)
+    func likePhoto(id:String, onCompletion:@escaping(String?)->Void)
+    func searchPhoto(query:String, page:Int, onCompletion: @escaping(([PhotoVM]?, String?) -> Void))
 }
 
 class HomeUseCases:HomeUseCasesProtocol {
@@ -31,13 +32,27 @@ class HomeUseCases:HomeUseCasesProtocol {
             
         }
     }
-    func searchPhoto(searchWord: String) {
-        
+    func searchPhoto(query:String, page:Int,onCompletion: @escaping(([PhotoVM]?, String?) -> Void)) {
+        self.unsplashClient.searchPhoto(query: query, page: page) { (photos, error) in
+            guard error == nil else {
+                return
+            }
+            let photosVM = photos?.compactMap({PhotoVM(photo:$0)})
+            onCompletion(photosVM,error)
+        }
     }
     
     func getPhotoDetail(id: String) {
         
     }
     
+    func likePhoto(id:String, onCompletion:@escaping(String?)->Void){
+        self.unsplashClient.likePhoto(id:id){ response in 
+            print(response)
+            onCompletion(response)
+        }
+            
+        
+    }
     
 }

@@ -7,8 +7,10 @@
 //
 
 import UIKit
-struct GetPhotosResponse:Decodable {
-    var photos:[Photo]
+struct UnsplashQueryResponse:Decodable {
+    var total:Int
+    var total_pages:Int
+    var results:[Photo]
 }
 
 struct Photo: Decodable {
@@ -32,16 +34,43 @@ enum PhotoRecordState {
     case downloaded
     case failed
 }
-struct PhotoVM {
+struct PhotoVM: URLImageProvider {
+    var id:String
     var description:String
     var thumbURL:URL?
     var thumbImg:UIImage = UIImage(named:"Placeholder")!
     var state:PhotoRecordState = .new
+    var userLike:Bool
+    var userName:String
+    var user:UserVM
+    
+    
+    var downloadURL: URL? {
+        return self.thumbURL
+    }
+    var outputImage: UIImage?{
+        get{
+            return self.thumbImg
+        }
+        set{
+            self.thumbImg = newValue ?? UIImage(named:"Placeholder")!
+        }
+    }
     init(photo:Photo){
-        self.description = photo.description ?? "No Description"
+        self.id = photo.id
+        self.description = photo.description ?? photo.alt_description ?? ""
         if let thumbUrl = photo.urls["thumb"], let url = URL(string: thumbUrl){
             self.thumbURL = url
         }
+        self.userName = photo.user.name
+        self.user = UserVM(user: photo.user)
+        self.userLike = photo.liked_by_user
     }
+}
+
+protocol URLImageProvider {
+    var downloadURL:URL? {get}
+    var outputImage:UIImage? {get set}
+    var state:PhotoRecordState {get set}
 }
 

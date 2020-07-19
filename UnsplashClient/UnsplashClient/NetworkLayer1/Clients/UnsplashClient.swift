@@ -8,14 +8,15 @@
 
 import Foundation
 
-enum UnsplashEndpoit{
+enum UnsplashEndpoit{    
     case photos(page:Int, per_page:Int, order_by:String?)
     case getPhoto(id:Int)
     case getRandomPhoto
     case getPhotoStatistics(id:Int)
     case updatePhoto(id:Int)
-    case likePhoto(id:Int)
-    case unlikePhoto(id:Int)
+    case likePhoto(id:String)
+    case unlikePhoto(id:String)
+    case search(query:String, page:Int)
 }
 
 extension UnsplashEndpoit:EndPointType{
@@ -52,7 +53,10 @@ extension UnsplashEndpoit:EndPointType{
             return "photos/\(id)/like"
         case .unlikePhoto(let id):
             return "photos/\(id)/like"
+        case .search(let query, let page):
+            return "search/photos"
         }
+        
     }
     
     var httpMethod: HttpMethod {
@@ -67,10 +71,12 @@ extension UnsplashEndpoit:EndPointType{
             return .get
         case .updatePhoto(_):
             return .put
-        case .likePhoto(_):
+        case .likePhoto(let id):
             return .post
         case .unlikePhoto(let id):
             return .delete
+        case .search(let query, let page):
+            return .get
         }
     }
     
@@ -94,10 +100,23 @@ extension UnsplashEndpoit:EndPointType{
             return .request
         case .updatePhoto(_):
             return .request
-        case .likePhoto(_):
-            return .request
+        case .likePhoto(let id):
+            let urlParams:Parameters = ["client_id":UnsplashClient.UnsplashAPIKey]
+            //urlParams["id"] = id
+                        
+            return .requestParameters(bodyParameters: nil,
+            bodyEncoding: .urlEncoding,
+            urlParameters: urlParams)
+            
         case .unlikePhoto(_):
             return .request
+        case .search(let query, let page):
+            var urlParams:Parameters = ["client_id":UnsplashClient.UnsplashAPIKey]
+            urlParams["query"] = query
+            urlParams["page"] = page
+            return .requestParameters(bodyParameters: nil,
+                                      bodyEncoding: .urlEncoding,
+                                      urlParameters: urlParams)
         }
     }
     
@@ -159,6 +178,40 @@ struct UnsplashClient {
         }
     }
     
+    
+    func likePhoto(id:String, completion:@escaping(String?)-> Void) {
+        router.request(.likePhoto(id: id)) { (data, response, error) in
+            
+        }
+    }
+    
+    func searchPhoto(query:String, page:Int, completion:@escaping([Photo]?, String?)->Void){
+        router.request(.search(query: query, page: page)) { (data, response, error) in
+            guard error == nil else {
+                completion(nil, "Please check your network connection.")
+                return
+            }
+            if let response = response as? HTTPURLResponse {
+                let result = self.handleNetworkResponse(response)
+                switch result {
+                case .success:
+                    guard let responseData = data else {
+                        completion(nil, NetworkResponse.noData.rawValue)
+                        return
+                    }
+                    print(responseData)
+                    let jsonData = try? JSONSerialization.jsonObject(with: responseData, options: .mutableContainers)
+                    print(jsonData)
+                    
+                    let queryResponse = try? JSONDecoder().decode(UnsplashQueryResponse.self, from: responseData)
+                    completion(queryResponse?.results,nil)
+                case .failure(let networkFailureError):
+                    completion(nil, networkFailureError)
+                }
+            }
+        }
+    }
+
     fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String>{
         switch response.statusCode {
         case 200...299: return .success

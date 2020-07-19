@@ -10,6 +10,7 @@ import UIKit
 
 class PendingOperations {
     lazy var downloadsInProgress: [IndexPath:Operation] = [:]
+    lazy var profileImageDownloadsInProgress: [IndexPath:Operation] = [:]
     lazy var downloadQueue:OperationQueue = {
         var queue = OperationQueue()
         queue.name = "Image download queue"
@@ -28,23 +29,23 @@ class PendingOperations {
 }
 
 class ImageDownloadOperation:Operation {
-    var photoRecord: PhotoVM
+    var imageURLProvider: URLImageProvider
     
-    init(_ photoRecord: PhotoVM){
-        self.photoRecord = photoRecord
+    init(_ photoRecord: URLImageProvider){
+        self.imageURLProvider = photoRecord
     }
     
     override func main() {
         guard !isCancelled else { return }
-        guard let url = photoRecord.thumbURL,
+        guard let url = imageURLProvider.downloadURL,
             let imageData = try? Data(contentsOf: url) else {return}
         
         if imageData.isEmpty == false {
-            self.photoRecord.thumbImg = UIImage(data:imageData)!
-            self.photoRecord.state = .downloaded
+            self.imageURLProvider.outputImage = UIImage(data:imageData)!
+            self.imageURLProvider.state = .downloaded
         } else {
-            self.photoRecord.thumbImg = UIImage(named:"Failed")!
-            self.photoRecord.state = .failed
+            self.imageURLProvider.outputImage = UIImage(named:"Failed")!
+            self.imageURLProvider.state = .failed
         }
     }
         

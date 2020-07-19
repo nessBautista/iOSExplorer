@@ -7,4 +7,5 @@ target 'UnsplashClient' do
 
   # Pods for UnsplashClient
   pod 'Swinject'
+  pod 'SwinjectAutoregistration'
 end
