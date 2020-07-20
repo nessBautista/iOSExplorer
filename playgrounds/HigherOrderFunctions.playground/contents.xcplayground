@@ -3,5 +3,8 @@
     <pages>
         <page name='Filter'/>
         <page name='Maps'/>
+        <page name='Reduce'/>
+        <page name='ForEach'/>
+        <page name='Sorted'/>
     </pages>
 </playground>
