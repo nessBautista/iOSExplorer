@@ -15,5 +15,6 @@
         <page name='DispatchGroup03_wrapAsyncFuncInto'/>
         <page name='DispatchGroup04_DownloadGroupOfImages'/>
         <page name='Semaphore01_downloadImages'/>
+        <page name='Threadsafe01'/>
     </pages>
 </playground>
