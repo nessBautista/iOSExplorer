@@ -1,5 +1,6 @@
 public extension Bool {
-    init?(bit:Int) {
+        
+    init?(bit: Int) {
         switch bit {
         case 0:
             self = false
