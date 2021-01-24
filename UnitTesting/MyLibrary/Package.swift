@@ -23,6 +23,10 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "MyLibraryTests",
-            dependencies: ["MyLibrary"]),
+            dependencies: ["MyLibrary"],
+            resources:[
+                .process("Resources/nature.png"),
+            ]
+        ),
     ]
 )

@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "MixSalad",
+        "repositoryURL": "https://github.com/nessBautista/MixSalad.git",
+        "state": {
+          "branch": "master",
+          "revision": "bae7e66c07ce6ed3019e18250930e7db963c6a14",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

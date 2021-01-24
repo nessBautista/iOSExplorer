@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import Combine
 enum NetworkResponse:String {
     case success
     case authenticationError = "You need to be authenticated first."
@@ -24,11 +24,38 @@ enum NetworkEnvironment {
     case staging
 }
 
+public enum RemoteError: Error {
+    case request(RequestError)
 
-enum Result<String>{
-    case success
-    case failure(String)
+    case response(URLError)
+
+    case decoding(Error)
 }
+/// Request error definitions
+public enum RequestError: Error {
+    case badRequest
+    case badResponse
+    case statusCode(HttpError)
+    case unknownError(String)
+    case networkError(URLError)
+
+    @available(*, unavailable, renamed: "other")
+    case otherError(Error)
+
+    case other(Error?)
+}
+public enum HttpError: Int {
+    // 400 Client Error
+    case badRequest = 400
+    case unauthorized = 401
+    case paymentRequired
+    
+}
+typealias Output = URLSession.DataTaskPublisher.Output
+
+typealias Failure = RemoteError
+
+
 public typealias NetworkRouterCompletion = (_ data: Data?, _ response:URLResponse?, _ error: Error? ) -> ()
 
 protocol NetworkRouter:class {
@@ -55,6 +82,33 @@ class Router<EndPoint:EndPointType>:NetworkRouter {
             onCompletion(nil,nil,error)
         }
         self.task?.resume()
+    }
+    
+    typealias Output =  URLSession.DataTaskPublisher.Output
+    func requestPublisher(_ route: EndPoint) -> AnyPublisher<Output, Error> {
+        let session = URLSession.shared
+        do {
+            let request = try self.buildRequest(from: route)
+            return session.dataTaskPublisher(for: request)
+                .mapError { (error) -> Error in
+                    switch error.code {
+                    case URLError.cannotFindHost:
+                    return APIError.networkError(error: error.localizedDescription)
+                    default:
+                        return APIError.unknownError
+                    }
+                }
+                .flatMap({ (output) -> AnyPublisher<Output, Error> in
+                    var result: Result<Output, Error> = .failure(APIError.unknownError)
+                    
+                    result = .success((data:output.data, response:output.response))
+                    return result.publisher.eraseToAnyPublisher()
+                })
+                .eraseToAnyPublisher()                
+        } catch {
+            let result: Result<Output, Error> = .failure(APIError.unknownError)
+            return result.publisher.eraseToAnyPublisher()
+        }
     }
     
     func cancel() {
@@ -127,3 +181,8 @@ class Router<EndPoint:EndPointType>:NetworkRouter {
 
 
 
+public enum APIError: Error {
+    case networkError(error:String)
+    case responseError(error:String)
+    case unknownError
+}

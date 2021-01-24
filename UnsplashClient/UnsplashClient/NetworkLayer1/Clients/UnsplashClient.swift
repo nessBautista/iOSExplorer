@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import Combine
 enum UnsplashEndpoit{    
     case photos(page:Int, per_page:Int, order_by:String?)
     case getPhoto(id:Int)
@@ -177,7 +177,32 @@ struct UnsplashClient {
 
         }
     }
-    
+    typealias getPhotosResponse = (photos:[Photo]?, errorDescription:String?)
+//    func getPhotos(page:Int) -> AnyPublisher<getPhotosResponse, Error> {
+//        router.requestPublisher(.photos(page: page, per_page: 10, order_by: nil))
+//            .flatMap { (data, response) -> AnyPublisher<getPhotosResponse, Error> in
+//                var serializedData: getPhotosResponse = ([Photo](), nil)
+//                var error = APIError.unknownError
+//
+//                return AnyPublisher(
+//                    Fail<getPhotosResponse, Error>(error: URLError(.cannotParseResponse))
+//                )
+//
+//            }.eraseToAnyPublisher()
+//
+//    }
+    func getPhotos(page:Int) -> AnyPublisher<getPhotosResponse, Error> {
+        router.requestPublisher(.photos(page: page, per_page: 10, order_by: nil))
+            .mapError({ (error) -> Error in
+                return APIError.unknownError
+            })
+            .map { (data, response) in
+                //let jsonData = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+                let photos = try? JSONDecoder().decode([Photo].self, from: data)
+                let serializedData: getPhotosResponse = (photos, nil)
+                return serializedData
+            }.eraseToAnyPublisher()
+    }
     
     func likePhoto(id:String, completion:@escaping(String?)-> Void) {
         router.request(.likePhoto(id: id)) { (data, response, error) in
@@ -220,6 +245,10 @@ struct UnsplashClient {
         case 600: return .failure(NetworkResponse.outdated.rawValue)
         default: return .failure(NetworkResponse.failed.rawValue)
         }
+    }
+    enum Result<String>{
+        case success
+        case failure(String)
     }
 }
 

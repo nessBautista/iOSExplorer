@@ -34,6 +34,8 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.homePresenter?.loadFeed(isSearching: false)
+        //self.homePresenter?.loadFeed_publisher(isSearching: false)
+        
         //Testing Post method
         //let client = TestClient()
         //client.testPost(userName: "GlazzingFox", tweet: "HelloWorld!")

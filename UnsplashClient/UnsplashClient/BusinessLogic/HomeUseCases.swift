@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import Combine
 
 protocol HomeUseCasesProtocol{
     var unsplashClient:UnsplashClient {get}
     func loadFeed(page:Int,onCompletion: @escaping(([PhotoVM]?, String?) -> Void))
+    func loadFeedPublisher(page:Int)-> AnyPublisher<[PhotoVM], Error>
     func getPhotoDetail(id:String)
     func likePhoto(id:String, onCompletion:@escaping(String?)->Void)
     func searchPhoto(query:String, page:Int, onCompletion: @escaping(([PhotoVM]?, String?) -> Void))
@@ -19,7 +21,7 @@ protocol HomeUseCasesProtocol{
 class HomeUseCases:HomeUseCasesProtocol {
     
     var unsplashClient:UnsplashClient
-    
+    var cancellables = Set<AnyCancellable>()
     init(unsplashClient:UnsplashClient){
         self.unsplashClient = unsplashClient
     }
@@ -31,6 +33,18 @@ class HomeUseCases:HomeUseCasesProtocol {
             onCompletion(photosVM,error)
             
         }
+        
+        
+
+    }
+    
+    func loadFeedPublisher(page:Int)-> AnyPublisher<[PhotoVM], Error> {
+        self.unsplashClient.getPhotos(page: page)
+            .mapError {return $0}
+            .map { (photoResponse) -> [PhotoVM] in
+                let photosVM = photoResponse.photos?.compactMap({PhotoVM(photo:$0)}) ?? []
+                return photosVM
+            }.eraseToAnyPublisher()
     }
     func searchPhoto(query:String, page:Int,onCompletion: @escaping(([PhotoVM]?, String?) -> Void)) {
         self.unsplashClient.searchPhoto(query: query, page: page) { (photos, error) in

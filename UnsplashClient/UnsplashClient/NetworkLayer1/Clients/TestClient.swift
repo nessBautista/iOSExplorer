@@ -58,8 +58,6 @@ extension TestClientEndpoint:EndPointType{
     var headers: HttpHeaders? {
         return nil
     }
-    
-    
 }
 
 struct TestClient{

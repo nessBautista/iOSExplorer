@@ -19,28 +19,32 @@ class UnsplashClientUITests: XCTestCase {
     }
 }
 
-class HomeUseCaseTest:HomeUseCasesProtocol{
-    var unsplashClient: UnsplashClient
-    
-    init(){
-        self.unsplashClient = UnsplashClient()
-    }
-    
-    func loadFeed(page: Int, onCompletion: @escaping (([PhotoVM]?, String?) -> Void)) {
-        onCompletion(nil, nil)
-    }
-    
-        
-    func likePhoto(id: String, onCompletion: @escaping (String?) -> Void) {
-        onCompletion(nil)
-    }
-    
-    func searchPhoto(query: String, page: Int, onCompletion: @escaping (([PhotoVM]?, String?) -> Void)) {
-        onCompletion(nil,nil)
-    }
-    
-    func getPhotoDetail(id: String) {
-    
-    }
-
-}
+//class HomeUseCaseTest:HomeUseCasesProtocol{
+//    func loadFeedPublisher(page: Int) -> AnyPublisher<[PhotoVM], Error> {
+//        
+//    }
+//    
+//    var unsplashClient: UnsplashClient
+//    
+//    init(){
+//        self.unsplashClient = UnsplashClient()
+//    }
+//    
+//    func loadFeed(page: Int, onCompletion: @escaping (([PhotoVM]?, String?) -> Void)) {
+//        onCompletion(nil, nil)
+//    }
+//    
+//        
+//    func likePhoto(id: String, onCompletion: @escaping (String?) -> Void) {
+//        onCompletion(nil)
+//    }
+//    
+//    func searchPhoto(query: String, page: Int, onCompletion: @escaping (([PhotoVM]?, String?) -> Void)) {
+//        onCompletion(nil,nil)
+//    }
+//    
+//    func getPhotoDetail(id: String) {
+//    
+//    }
+//
+//}

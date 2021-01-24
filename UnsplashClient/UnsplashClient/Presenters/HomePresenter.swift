@@ -7,11 +7,13 @@
 //
 
 import UIKit
-
+import Combine
+import MixSalad
 protocol HomePresenterProtocol: AnyObject {
     var homeUseCase:HomeUseCasesProtocol {get}
     var delegate:HomePresenterDelegate? {get set}
     var photos:[PhotoVM] {get set}
+    var photosPublisher:[PhotoVM] {get set}
     var currentCount:Int {get}
     var totalCount:Int {get}
     func getPhoto(at indexPath:IndexPath) -> PhotoVM?
@@ -20,6 +22,7 @@ protocol HomePresenterProtocol: AnyObject {
     func searchPhoto()
     
     func loadFeed(isSearching:Bool)
+    func loadFeed_publisher(isSearching:Bool )
     func cancelFeedLoad(for indexPaths:[IndexPath])
     func downloadImageWithURLSession(at indexPath:IndexPath, with url:URL)
     func downloadWithGlobalQueue(at indexPath:IndexPath, with url:URL)
@@ -27,13 +30,17 @@ protocol HomePresenterProtocol: AnyObject {
     
 }
 
-class HomePresenter:HomePresenterProtocol {
+class HomePresenter:  ObservableObject, HomePresenterProtocol {
     private var currentPage = 0
     private var isFetchInProgress = false
     private var searchQuery:String = String()
     var homeUseCase:HomeUseCasesProtocol
     unowned var delegate:HomePresenterDelegate?
+    
+    public var subscriptions = Set<AnyCancellable>()
+    
     var photos:[PhotoVM] = []
+    @Published var photosPublisher:[PhotoVM] = []
     let pendingOperations:PendingOperations
     var currentCount: Int {
         return self.photos.count
@@ -58,7 +65,43 @@ class HomePresenter:HomePresenterProtocol {
         }
     }
     
-    func loadFeed(isSearching:Bool = false){
+    func loadFeed_publisher(isSearching:Bool = false) {
+        guard isSearching == false else {
+            self.searchPhoto()
+            return
+        }
+        
+        //Check for isFetchInProgress
+        guard self.isFetchInProgress == false else { return }
+        //set the lock on future threads
+        self.isFetchInProgress = true
+        
+        self.homeUseCase.loadFeedPublisher(page: self.currentPage)
+            .receive(on: DispatchQueue.main)
+            .sink { (completion) in
+                let testBoolean = Bool(bit: 1)
+                print(completion)
+                //handle success
+               
+            } receiveValue: { (photos) in
+                defer{self.isFetchInProgress = false}
+                self.photosPublisher = photos
+                //handle success
+                self.currentPage += 1
+                
+                guard photos.count > 0 else {return}
+                self.photos.append(contentsOf:photos)
+                
+                
+                if self.currentPage > 1 {
+                    let indexPathToReload = self.calculateIndexPathsToReload(from: photos)
+                    self.delegate?.didLoadFeed(with: indexPathToReload)
+                } else {
+                    self.delegate?.didLoadFeed(with: nil)
+                }
+            }.store(in: &subscriptions)
+    }
+    func loadFeed(isSearching:Bool = false) {
         
         guard isSearching == false else {
             self.searchPhoto()

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2777BA9F25BDF7250070CCA9 /* MixSalad in Frameworks */ = {isa = PBXBuildFile; productRef = 2777BA9E25BDF7250070CCA9 /* MixSalad */; };
 		CC16DEFB24B4D4760070A366 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC16DEFA24B4D4760070A366 /* AppDelegate.swift */; };
 		CC16DEFF24B4D4760070A366 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC16DEFE24B4D4760070A366 /* ViewController.swift */; };
 		CC16DF0224B4D4760070A366 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC16DF0024B4D4760070A366 /* Main.storyboard */; };
@@ -107,6 +108,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBF3CAB80850C4155E737B7B /* Pods_UnsplashClient.framework in Frameworks */,
+				2777BA9F25BDF7250070CCA9 /* MixSalad in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +332,9 @@
 			dependencies = (
 			);
 			name = UnsplashClient;
+			packageProductDependencies = (
+				2777BA9E25BDF7250070CCA9 /* MixSalad */,
+			);
 			productName = UnsplashClient;
 			productReference = CC16DEF724B4D4760070A366 /* UnsplashClient.app */;
 			productType = "com.apple.product-type.application";
@@ -359,7 +364,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "Ness Bautista";
 				TargetAttributes = {
 					CC16DEF624B4D4760070A366 = {
@@ -380,6 +385,9 @@
 				Base,
 			);
 			mainGroup = CC16DEEE24B4D4760070A366;
+			packageReferences = (
+				2777BA9D25BDF7250070CCA9 /* XCRemoteSwiftPackageReference "MixSalad" */,
+			);
 			productRefGroup = CC16DEF824B4D4760070A366 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -556,6 +564,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -580,13 +589,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -616,6 +626,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -634,12 +645,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -652,6 +664,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GQGZN6D9K9;
 				INFOPLIST_FILE = UnsplashClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -671,6 +684,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GQGZN6D9K9;
 				INFOPLIST_FILE = UnsplashClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -751,6 +765,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2777BA9D25BDF7250070CCA9 /* XCRemoteSwiftPackageReference "MixSalad" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nessBautista/MixSalad.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2777BA9E25BDF7250070CCA9 /* MixSalad */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2777BA9D25BDF7250070CCA9 /* XCRemoteSwiftPackageReference "MixSalad" */;
+			productName = MixSalad;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CC16DEEF24B4D4760070A366 /* Project object */;
 }
