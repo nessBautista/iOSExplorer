@@ -7,5 +7,7 @@
         <page name='DataStreamExample'/>
         <page name='RestAPI'/>
         <page name='Schedulers'/>
+        <page name='KeyPaths'/>
+        <page name='GroupTasks'/>
     </pages>
 </playground>
