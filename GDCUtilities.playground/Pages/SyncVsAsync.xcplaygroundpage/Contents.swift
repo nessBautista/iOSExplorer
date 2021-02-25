@@ -3,7 +3,7 @@
 import Foundation
 
 let mainQueue = DispatchQueue.main
-let serialQueue = DispatchQueue.global(qos: .userInitiated)
+let userQueue = DispatchQueue.global(qos: .userInitiated)
 let concurrentQueue = DispatchQueue(label: "gdc.utilities.concurrent.com", attributes: .concurrent)
 
 /*
@@ -13,8 +13,8 @@ let concurrentQueue = DispatchQueue(label: "gdc.utilities.concurrent.com", attri
 
 func dispatchSyncTask(){
     dispatchPrecondition(condition: .onQueue(.main))
-    serialQueue.sync {
-        dispatchPrecondition(condition: .onQueue(serialQueue))
+    userQueue.sync {
+        dispatchPrecondition(condition: .onQueue(userQueue))
         sleep(2)
         print("1--> performing work on the serial queue")
     }
@@ -49,7 +49,7 @@ func dispatchAsyncTaskWithBarrier(){
         sleep(1)
         print("2.2--> task after barrier")
     }
-    serialQueue.async {
+    userQueue.async {
         print("this task is in a diferent queue, and is not affected by the barrier")
     }
 }
@@ -69,5 +69,32 @@ func useBarrierInMain(){
     print("2---> executed after barrier")
     
 }
-useBarrierInMain()
+//useBarrierInMain()
+
+//Notice that barriers doesn't work on global queues:
+//https://developer.apple.com/documentation/dispatch/1452917-dispatch_barrier_sync?language=occ
+//Only in the queues you created yourself
+func dispatchAsyncTaskWithBarrierInUserQueue(){
+    dispatchPrecondition(condition: .onQueue(.main))
+    
+    //This tasks will stop execution for all tasks after it.
+    //until this tasks is finihsed
+    userQueue.async(flags: .barrier) {
+        dispatchPrecondition(condition: .onQueue(userQueue))
+        sleep(5)
+        print("1--> Task Executing as Barrier")
+    }
+    dispatchPrecondition(condition: .onQueue(.main))
+    userQueue.async() {
+        dispatchPrecondition(condition: .onQueue(userQueue))
+        sleep(1)
+        print("2.1--> task after barrier ")
+    }
+    userQueue.async() {
+        dispatchPrecondition(condition: .onQueue(userQueue))
+        sleep(1)
+        print("2.2--> task after barrier")
+    }
+}
+dispatchAsyncTaskWithBarrierInUserQueue()
 //: [Next](@next)

@@ -37,7 +37,22 @@ func deadLock(){
         print("done")
     }
 }
+//deadLock()
 
-deadLock()
+
+//If Main queue dispatched in Main queue as sync will make exception because make deadlock
+func deadLockOnMainQueue() {
+    dispatchPrecondition(condition: .onQueue(.main))
+    mainQueue.sync {
+//        //dispatchPrecondition(condition: .onQueue(.main))
+        print("1---first part")
+//
+//        mainQueue.sync {
+//            //dispatchPrecondition(condition: .onQueue(.main))
+//            print("2---first part")
+//        }
+    }
+}
+deadLockOnMainQueue()
 //: [Next](@next)
 
