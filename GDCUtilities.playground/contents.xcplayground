@@ -3,5 +3,7 @@
     <pages>
         <page name='BasicDispatchQueues'/>
         <page name='DispatchWorkItems'/>
+        <page name='SyncVsAsync'/>
+        <page name='DeadLock'/>
     </pages>
 </playground>
