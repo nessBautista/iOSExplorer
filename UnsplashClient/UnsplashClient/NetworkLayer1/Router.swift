@@ -58,7 +58,7 @@ typealias Failure = RemoteError
 
 public typealias NetworkRouterCompletion = (_ data: Data?, _ response:URLResponse?, _ error: Error? ) -> ()
 
-protocol NetworkRouter:class {
+protocol NetworkRouter:AnyObject {
     associatedtype EndPoint:EndPointType
     func request(_ route: EndPoint, onCompletion: @escaping NetworkRouterCompletion)
     func cancel()

@@ -35,7 +35,7 @@ class BasicGrid02: UIViewController {
 
     func configureHierarchy() {
         view.backgroundColor = .systemBackground
-        let layout = self.getBasicGrid()
+        let layout = self.getSimpleLayout()
         self.collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.addSubview(collectionView)
@@ -58,6 +58,8 @@ class BasicGrid02: UIViewController {
                     - The Set of Subscriptios stored at the ParentVM(BaseGridViewModel)
                     which have the same number as the array of childsVMs (ImageViewModels)
                  
+                 --> Keep in mind that the reference to the cell view model should be weak
+                 
                  */
                 cell.load(vm: imageModel)
                 self.viewModel.fetchImage02(for: indexPath.row)
@@ -70,6 +72,10 @@ class BasicGrid02: UIViewController {
                     indexPath: IndexPath,
                     identifier: BasicGridViewModel.ImageViewModel) -> UICollectionViewCell? in
             
+//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BasicCollectionCell02", for: indexPath) as! BasicCollectionCell02
+//
+//                return cell
+            print(indexPath)
             return collectionView
                     .dequeueConfiguredReusableCell(using: cellRegistration,
                                                    for: indexPath,

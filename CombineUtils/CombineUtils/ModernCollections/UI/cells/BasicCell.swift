@@ -9,7 +9,7 @@ import UIKit
 import Combine
 class BasicCell: UITableViewCell {
     @IBOutlet weak var cellImage: UIImageView!
-    var viewModel: ImageViewModel?
+    weak var viewModel: ImageViewModel?
     var subscription: AnyCancellable?
     let defaultImage: UIImage = {
         return UIImage(named: "2")!

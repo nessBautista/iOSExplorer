@@ -14,18 +14,23 @@ class BasicCollectionCell02: UICollectionViewCell {
     var subscription: AnyCancellable?
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         self.imageView = UIImageView(frame: self.contentView.bounds)
         self.contentView.addSubview(imageView)
         self.imageView.anchor(top: self.contentView.topAnchor,
                               leading: self.contentView.leadingAnchor,
                               trailing: self.contentView.trailingAnchor,
                               bottom: self.contentView.bottomAnchor)
+        
     }
+    
 
     required init?(coder: NSCoder) {
         fatalError("not implemented")
     }
-    
+    deinit {
+        print("deinit:\(viewModel?.identifier) ")
+    }
     override func prepareForReuse() {
        
         self.imageView.image = nil

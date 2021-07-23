@@ -27,8 +27,8 @@ class ImageListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BasicCell")
             as? BasicCell
         if let url = self.viewModel.getUrlFor(indexPath: indexPath) {
-            
-            cell?.viewModel = ImageViewModel(url: url)
+            let vm = ImageViewModel(url: url)
+            cell?.viewModel = vm
         
             if tableView.indexPathsForVisibleRows?.contains(indexPath) ?? false {
                 print("index: \(indexPath.row)")

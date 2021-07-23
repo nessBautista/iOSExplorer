@@ -62,7 +62,6 @@ class BasicGrid: UIViewController {
     }
     
     private func configureDataSource() {
-        
         let cellRegistration = UICollectionView
             .CellRegistration<BasicCollectionCell, BasicGridViewModel.ImageModel> {
                                 (cell, indexPath, imageModel) in
