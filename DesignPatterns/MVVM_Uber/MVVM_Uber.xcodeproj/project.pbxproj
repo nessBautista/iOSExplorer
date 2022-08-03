@@ -1,0 +1,773 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC761207289455970066A53C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC761206289455970066A53C /* AppDelegate.swift */; };
+		CC761210289455980066A53C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC76120F289455980066A53C /* Assets.xcassets */; };
+		CC76121E289455980066A53C /* MVVM_UberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76121D289455980066A53C /* MVVM_UberTests.swift */; };
+		CC76123B289456C40066A53C /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76123A289456C40066A53C /* DependencyContainer.swift */; };
+		CC76123D289457580066A53C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76123C289457580066A53C /* MainViewModel.swift */; };
+		CC76123F289457F20066A53C /* SignedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76123E289457F20066A53C /* SignedInViewController.swift */; };
+		CC761242289458060066A53C /* NiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC761241289458060066A53C /* NiblessViewController.swift */; };
+		CC7612442894585D0066A53C /* SignedInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7612432894585D0066A53C /* SignedInViewModel.swift */; };
+		CC761246289458A50066A53C /* SignedInDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC761245289458A50066A53C /* SignedInDependencyContainer.swift */; };
+		CC76124928945A370066A53C /* SignedInResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76124828945A370066A53C /* SignedInResponder.swift */; };
+		CC76124B28945A5A0066A53C /* NotSignedInResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76124A28945A5A0066A53C /* NotSignedInResponder.swift */; };
+		CC76124E28945A680066A53C /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76124D28945A680066A53C /* UserSession.swift */; };
+		CC76125128945AAD0066A53C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76125028945AAD0066A53C /* MainView.swift */; };
+		CC76125328945AEC0066A53C /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76125228945AEC0066A53C /* UserProfile.swift */; };
+		CC76125528945B060066A53C /* RemoteUserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76125428945B060066A53C /* RemoteUserSession.swift */; };
+		CC76125728945B890066A53C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76125628945B890066A53C /* MainViewController.swift */; };
+		CC76125928945E5D0066A53C /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76125828945E5D0066A53C /* ViewController+Extensions.swift */; };
+		CC76125C28945EBF0066A53C /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76125B28945EBF0066A53C /* LaunchViewModel.swift */; };
+		CC76125E28945EC50066A53C /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76125D28945EC50066A53C /* LaunchViewController.swift */; };
+		CC761261289466AB0066A53C /* UserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC761260289466AB0066A53C /* UserSessionRepository.swift */; };
+		CC761263289469290066A53C /* NiblessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC761262289469290066A53C /* NiblessView.swift */; };
+		CC761265289469870066A53C /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC761264289469870066A53C /* LaunchView.swift */; };
+		CC761268289478740066A53C /* SignedInViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC761267289478740066A53C /* SignedInViewType.swift */; };
+		CC76126A289478960066A53C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC761269289478960066A53C /* Location.swift */; };
+		CC76126C28947C080066A53C /* GettingUsersLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76126B28947C080066A53C /* GettingUsersLocationViewController.swift */; };
+		CC76126F289482D60066A53C /* GettingUsersLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76126E289482D60066A53C /* GettingUsersLocationViewModel.swift */; };
+		CC761271289482E30066A53C /* Locator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC761270289482E30066A53C /* Locator.swift */; };
+		CC761273289484190066A53C /* DeterminedPickUpLocationResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC761272289484190066A53C /* DeterminedPickUpLocationResponder.swift */; };
+		CC761275289487720066A53C /* GettingUsersLocationRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC761274289487720066A53C /* GettingUsersLocationRootView.swift */; };
+		CC7612772894880D0066A53C /* ErrorMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7612762894880D0066A53C /* ErrorMessages.swift */; };
+		CC76127928948A050066A53C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76127828948A050066A53C /* Colors.swift */; };
+		CC9E52202896FEF7009CCBBB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9E521F2896FEF7009CCBBB /* Extensions.swift */; };
+		CC9E52232896FF8C009CCBBB /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9E52222896FF8C009CCBBB /* MainViewControllerTests.swift */; };
+		CC9E52252897073E009CCBBB /* SingedInControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9E52242897073E009CCBBB /* SingedInControllerTests.swift */; };
+		CC9E522828970841009CCBBB /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9E522728970841009CCBBB /* OnBoardingViewController.swift */; };
+		CC9E522A28970927009CCBBB /* OnboardingControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9E522928970927009CCBBB /* OnboardingControllerTests.swift */; };
+		CCA688DB289ACBC1005F8D75 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA688DA289ACBC1005F8D75 /* Cache.swift */; };
+		CCA688DE289AD2F6005F8D75 /* PickMeUpMapRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA688DD289AD2F6005F8D75 /* PickMeUpMapRootView.swift */; };
+		CCA688E0289AD3A0005F8D75 /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA688DF289AD3A0005F8D75 /* MapAnnotation.swift */; };
+		CCA688E2289AD3FC005F8D75 /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA688E1289AD3FC005F8D75 /* MapAnnotationView.swift */; };
+		CCA688E4289AD832005F8D75 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA688E3289AD832005F8D75 /* MapViewModel.swift */; };
+		CCA688E6289AD863005F8D75 /* MapAnnotationDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA688E5289AD863005F8D75 /* MapAnnotationDiff.swift */; };
+		CCB90D1928997FF700069BB5 /* PickMeUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB90D1828997FF700069BB5 /* PickMeUpViewController.swift */; };
+		CCB90D1B2899804100069BB5 /* PickMeUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB90D1A2899804100069BB5 /* PickMeUpViewModel.swift */; };
+		CCB90D1D2899818000069BB5 /* PickMeUpDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB90D1C2899818000069BB5 /* PickMeUpDependencyContainer.swift */; };
+		CCB90D21289981F000069BB5 /* PickMeUpMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB90D20289981F000069BB5 /* PickMeUpMapViewModel.swift */; };
+		CCB90D2D2899CD9E00069BB5 /* PickMeUpRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB90D2C2899CD9E00069BB5 /* PickMeUpRootView.swift */; };
+		CCB90D2F2899D07900069BB5 /* SwiftUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB90D2E2899D07900069BB5 /* SwiftUIViewController.swift */; };
+		CCB90D312899D0DB00069BB5 /* PickMeUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB90D302899D0DB00069BB5 /* PickMeUpView.swift */; };
+		CCB90D332899D51D00069BB5 /* PickMeUpRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB90D322899D51D00069BB5 /* PickMeUpRootViewController.swift */; };
+		CCB90D352899DA3800069BB5 /* PickMeUpMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB90D342899DA3800069BB5 /* PickMeUpMapViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC76121A289455980066A53C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC7611FB289455970066A53C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC761202289455970066A53C;
+			remoteInfo = MVVM_Uber;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC761203289455970066A53C /* MVVM_Uber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVM_Uber.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC761206289455970066A53C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC76120F289455980066A53C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC761214289455980066A53C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC761219289455980066A53C /* MVVM_UberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVM_UberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC76121D289455980066A53C /* MVVM_UberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_UberTests.swift; sourceTree = "<group>"; };
+		CC76123A289456C40066A53C /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		CC76123C289457580066A53C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		CC76123E289457F20066A53C /* SignedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInViewController.swift; sourceTree = "<group>"; };
+		CC761241289458060066A53C /* NiblessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessViewController.swift; sourceTree = "<group>"; };
+		CC7612432894585D0066A53C /* SignedInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInViewModel.swift; sourceTree = "<group>"; };
+		CC761245289458A50066A53C /* SignedInDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInDependencyContainer.swift; sourceTree = "<group>"; };
+		CC76124828945A370066A53C /* SignedInResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInResponder.swift; sourceTree = "<group>"; };
+		CC76124A28945A5A0066A53C /* NotSignedInResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotSignedInResponder.swift; sourceTree = "<group>"; };
+		CC76124D28945A680066A53C /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		CC76125028945AAD0066A53C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CC76125228945AEC0066A53C /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		CC76125428945B060066A53C /* RemoteUserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteUserSession.swift; sourceTree = "<group>"; };
+		CC76125628945B890066A53C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CC76125828945E5D0066A53C /* ViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extensions.swift"; sourceTree = "<group>"; };
+		CC76125B28945EBF0066A53C /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		CC76125D28945EC50066A53C /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		CC761260289466AB0066A53C /* UserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionRepository.swift; sourceTree = "<group>"; };
+		CC761262289469290066A53C /* NiblessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessView.swift; sourceTree = "<group>"; };
+		CC761264289469870066A53C /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		CC761267289478740066A53C /* SignedInViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInViewType.swift; sourceTree = "<group>"; };
+		CC761269289478960066A53C /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		CC76126B28947C080066A53C /* GettingUsersLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingUsersLocationViewController.swift; sourceTree = "<group>"; };
+		CC76126E289482D60066A53C /* GettingUsersLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingUsersLocationViewModel.swift; sourceTree = "<group>"; };
+		CC761270289482E30066A53C /* Locator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locator.swift; sourceTree = "<group>"; };
+		CC761272289484190066A53C /* DeterminedPickUpLocationResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeterminedPickUpLocationResponder.swift; sourceTree = "<group>"; };
+		CC761274289487720066A53C /* GettingUsersLocationRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingUsersLocationRootView.swift; sourceTree = "<group>"; };
+		CC7612762894880D0066A53C /* ErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
+		CC76127828948A050066A53C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		CC9E521F2896FEF7009CCBBB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CC9E52222896FF8C009CCBBB /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
+		CC9E52242897073E009CCBBB /* SingedInControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingedInControllerTests.swift; sourceTree = "<group>"; };
+		CC9E522728970841009CCBBB /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		CC9E522928970927009CCBBB /* OnboardingControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingControllerTests.swift; sourceTree = "<group>"; };
+		CCA688DA289ACBC1005F8D75 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		CCA688DD289AD2F6005F8D75 /* PickMeUpMapRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickMeUpMapRootView.swift; sourceTree = "<group>"; };
+		CCA688DF289AD3A0005F8D75 /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
+		CCA688E1289AD3FC005F8D75 /* MapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
+		CCA688E3289AD832005F8D75 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		CCA688E5289AD863005F8D75 /* MapAnnotationDiff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationDiff.swift; sourceTree = "<group>"; };
+		CCB90D1828997FF700069BB5 /* PickMeUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickMeUpViewController.swift; sourceTree = "<group>"; };
+		CCB90D1A2899804100069BB5 /* PickMeUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickMeUpViewModel.swift; sourceTree = "<group>"; };
+		CCB90D1C2899818000069BB5 /* PickMeUpDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickMeUpDependencyContainer.swift; sourceTree = "<group>"; };
+		CCB90D20289981F000069BB5 /* PickMeUpMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickMeUpMapViewModel.swift; sourceTree = "<group>"; };
+		CCB90D2C2899CD9E00069BB5 /* PickMeUpRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickMeUpRootView.swift; sourceTree = "<group>"; };
+		CCB90D2E2899D07900069BB5 /* SwiftUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewController.swift; sourceTree = "<group>"; };
+		CCB90D302899D0DB00069BB5 /* PickMeUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickMeUpView.swift; sourceTree = "<group>"; };
+		CCB90D322899D51D00069BB5 /* PickMeUpRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickMeUpRootViewController.swift; sourceTree = "<group>"; };
+		CCB90D342899DA3800069BB5 /* PickMeUpMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickMeUpMapViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC761200289455970066A53C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC761216289455980066A53C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC7611FA289455970066A53C = {
+			isa = PBXGroup;
+			children = (
+				CC761205289455970066A53C /* MVVM_Uber */,
+				CC76121C289455980066A53C /* MVVM_UberTests */,
+				CC761204289455970066A53C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC761204289455970066A53C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC761203289455970066A53C /* MVVM_Uber.app */,
+				CC761219289455980066A53C /* MVVM_UberTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC761205289455970066A53C /* MVVM_Uber */ = {
+			isa = PBXGroup;
+			children = (
+				CC76124C28945A610066A53C /* Models */,
+				CC76125A28945EB60066A53C /* Launch */,
+				CC76124728945A2A0066A53C /* Navigation */,
+				CC761239289456B70066A53C /* Dependencies */,
+				CC7612372894569F0066A53C /* Main */,
+				CC761236289456920066A53C /* SignedIn */,
+				CC761206289455970066A53C /* AppDelegate.swift */,
+				CC76120F289455980066A53C /* Assets.xcassets */,
+				CC761214289455980066A53C /* Info.plist */,
+			);
+			path = MVVM_Uber;
+			sourceTree = "<group>";
+		};
+		CC76121C289455980066A53C /* MVVM_UberTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC9E52212896FF68009CCBBB /* Controller Tests */,
+				CC9E521E2896FEE8009CCBBB /* Test Extensions */,
+				CC9E521D2896FDF4009CCBBB /* TestClasses */,
+			);
+			path = MVVM_UberTests;
+			sourceTree = "<group>";
+		};
+		CC761236289456920066A53C /* SignedIn */ = {
+			isa = PBXGroup;
+			children = (
+				CC76126D289482B50066A53C /* GettingUserLocation */,
+				CC761238289456A80066A53C /* PickMeUp */,
+				CC7612432894585D0066A53C /* SignedInViewModel.swift */,
+				CC761267289478740066A53C /* SignedInViewType.swift */,
+				CC76123E289457F20066A53C /* SignedInViewController.swift */,
+			);
+			path = SignedIn;
+			sourceTree = "<group>";
+		};
+		CC7612372894569F0066A53C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CC76123C289457580066A53C /* MainViewModel.swift */,
+				CC76125628945B890066A53C /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CC761238289456A80066A53C /* PickMeUp */ = {
+			isa = PBXGroup;
+			children = (
+				CCA688DC289AD2DD005F8D75 /* Map */,
+				CCB90D322899D51D00069BB5 /* PickMeUpRootViewController.swift */,
+				CCB90D1828997FF700069BB5 /* PickMeUpViewController.swift */,
+				CCB90D1A2899804100069BB5 /* PickMeUpViewModel.swift */,
+				CCB90D2C2899CD9E00069BB5 /* PickMeUpRootView.swift */,
+				CCB90D302899D0DB00069BB5 /* PickMeUpView.swift */,
+			);
+			path = PickMeUp;
+			sourceTree = "<group>";
+		};
+		CC761239289456B70066A53C /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				CC76123A289456C40066A53C /* DependencyContainer.swift */,
+				CC761245289458A50066A53C /* SignedInDependencyContainer.swift */,
+				CCB90D1C2899818000069BB5 /* PickMeUpDependencyContainer.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		CC761240289457F80066A53C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CC761241289458060066A53C /* NiblessViewController.swift */,
+				CCB90D2E2899D07900069BB5 /* SwiftUIViewController.swift */,
+				CC76125828945E5D0066A53C /* ViewController+Extensions.swift */,
+				CC761262289469290066A53C /* NiblessView.swift */,
+				CC7612762894880D0066A53C /* ErrorMessages.swift */,
+				CC76127828948A050066A53C /* Colors.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CC76124728945A2A0066A53C /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				CC76124828945A370066A53C /* SignedInResponder.swift */,
+				CC76125028945AAD0066A53C /* MainView.swift */,
+				CC76124A28945A5A0066A53C /* NotSignedInResponder.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		CC76124C28945A610066A53C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CCA688D9289ACBB9005F8D75 /* Cache */,
+				CC9E522628970837009CCBBB /* OnBoarding */,
+				CC761240289457F80066A53C /* Utils */,
+				CC76125F2894669E0066A53C /* Repos */,
+				CC76124D28945A680066A53C /* UserSession.swift */,
+				CC76125428945B060066A53C /* RemoteUserSession.swift */,
+				CC76125228945AEC0066A53C /* UserProfile.swift */,
+				CC761269289478960066A53C /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CC76125A28945EB60066A53C /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				CC76125B28945EBF0066A53C /* LaunchViewModel.swift */,
+				CC761264289469870066A53C /* LaunchView.swift */,
+				CC76125D28945EC50066A53C /* LaunchViewController.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		CC76125F2894669E0066A53C /* Repos */ = {
+			isa = PBXGroup;
+			children = (
+				CC761260289466AB0066A53C /* UserSessionRepository.swift */,
+			);
+			path = Repos;
+			sourceTree = "<group>";
+		};
+		CC76126D289482B50066A53C /* GettingUserLocation */ = {
+			isa = PBXGroup;
+			children = (
+				CC76126B28947C080066A53C /* GettingUsersLocationViewController.swift */,
+				CC761274289487720066A53C /* GettingUsersLocationRootView.swift */,
+				CC76126E289482D60066A53C /* GettingUsersLocationViewModel.swift */,
+				CC761270289482E30066A53C /* Locator.swift */,
+				CC761272289484190066A53C /* DeterminedPickUpLocationResponder.swift */,
+			);
+			path = GettingUserLocation;
+			sourceTree = "<group>";
+		};
+		CC9E521D2896FDF4009CCBBB /* TestClasses */ = {
+			isa = PBXGroup;
+			children = (
+				CC76121D289455980066A53C /* MVVM_UberTests.swift */,
+			);
+			path = TestClasses;
+			sourceTree = "<group>";
+		};
+		CC9E521E2896FEE8009CCBBB /* Test Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CC9E521F2896FEF7009CCBBB /* Extensions.swift */,
+			);
+			path = "Test Extensions";
+			sourceTree = "<group>";
+		};
+		CC9E52212896FF68009CCBBB /* Controller Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CC9E52222896FF8C009CCBBB /* MainViewControllerTests.swift */,
+				CC9E52242897073E009CCBBB /* SingedInControllerTests.swift */,
+				CC9E522928970927009CCBBB /* OnboardingControllerTests.swift */,
+			);
+			path = "Controller Tests";
+			sourceTree = "<group>";
+		};
+		CC9E522628970837009CCBBB /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				CC9E522728970841009CCBBB /* OnBoardingViewController.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		CCA688D9289ACBB9005F8D75 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				CCA688DA289ACBC1005F8D75 /* Cache.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		CCA688DC289AD2DD005F8D75 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				CCB90D20289981F000069BB5 /* PickMeUpMapViewModel.swift */,
+				CCB90D342899DA3800069BB5 /* PickMeUpMapViewController.swift */,
+				CCA688DD289AD2F6005F8D75 /* PickMeUpMapRootView.swift */,
+				CCA688DF289AD3A0005F8D75 /* MapAnnotation.swift */,
+				CCA688E1289AD3FC005F8D75 /* MapAnnotationView.swift */,
+				CCA688E3289AD832005F8D75 /* MapViewModel.swift */,
+				CCA688E5289AD863005F8D75 /* MapAnnotationDiff.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC761202289455970066A53C /* MVVM_Uber */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC76122D289455980066A53C /* Build configuration list for PBXNativeTarget "MVVM_Uber" */;
+			buildPhases = (
+				CC7611FF289455970066A53C /* Sources */,
+				CC761200289455970066A53C /* Frameworks */,
+				CC761201289455970066A53C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MVVM_Uber;
+			productName = MVVM_Uber;
+			productReference = CC761203289455970066A53C /* MVVM_Uber.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC761218289455980066A53C /* MVVM_UberTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC761230289455980066A53C /* Build configuration list for PBXNativeTarget "MVVM_UberTests" */;
+			buildPhases = (
+				CC761215289455980066A53C /* Sources */,
+				CC761216289455980066A53C /* Frameworks */,
+				CC761217289455980066A53C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC76121B289455980066A53C /* PBXTargetDependency */,
+			);
+			name = MVVM_UberTests;
+			productName = MVVM_UberTests;
+			productReference = CC761219289455980066A53C /* MVVM_UberTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC7611FB289455970066A53C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					CC761202289455970066A53C = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					CC761218289455980066A53C = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = CC761202289455970066A53C;
+					};
+				};
+			};
+			buildConfigurationList = CC7611FE289455970066A53C /* Build configuration list for PBXProject "MVVM_Uber" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC7611FA289455970066A53C;
+			productRefGroup = CC761204289455970066A53C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC761202289455970066A53C /* MVVM_Uber */,
+				CC761218289455980066A53C /* MVVM_UberTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC761201289455970066A53C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC761210289455980066A53C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC761217289455980066A53C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC7611FF289455970066A53C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCA688DE289AD2F6005F8D75 /* PickMeUpMapRootView.swift in Sources */,
+				CCB90D1D2899818000069BB5 /* PickMeUpDependencyContainer.swift in Sources */,
+				CC7612772894880D0066A53C /* ErrorMessages.swift in Sources */,
+				CC76123B289456C40066A53C /* DependencyContainer.swift in Sources */,
+				CCB90D2D2899CD9E00069BB5 /* PickMeUpRootView.swift in Sources */,
+				CCA688E2289AD3FC005F8D75 /* MapAnnotationView.swift in Sources */,
+				CCB90D21289981F000069BB5 /* PickMeUpMapViewModel.swift in Sources */,
+				CC761265289469870066A53C /* LaunchView.swift in Sources */,
+				CC76125E28945EC50066A53C /* LaunchViewController.swift in Sources */,
+				CC76125928945E5D0066A53C /* ViewController+Extensions.swift in Sources */,
+				CC76124E28945A680066A53C /* UserSession.swift in Sources */,
+				CCB90D312899D0DB00069BB5 /* PickMeUpView.swift in Sources */,
+				CC761268289478740066A53C /* SignedInViewType.swift in Sources */,
+				CC7612442894585D0066A53C /* SignedInViewModel.swift in Sources */,
+				CC761246289458A50066A53C /* SignedInDependencyContainer.swift in Sources */,
+				CCB90D2F2899D07900069BB5 /* SwiftUIViewController.swift in Sources */,
+				CC9E522828970841009CCBBB /* OnBoardingViewController.swift in Sources */,
+				CCA688E6289AD863005F8D75 /* MapAnnotationDiff.swift in Sources */,
+				CC76126C28947C080066A53C /* GettingUsersLocationViewController.swift in Sources */,
+				CC761207289455970066A53C /* AppDelegate.swift in Sources */,
+				CC761275289487720066A53C /* GettingUsersLocationRootView.swift in Sources */,
+				CC761261289466AB0066A53C /* UserSessionRepository.swift in Sources */,
+				CC761242289458060066A53C /* NiblessViewController.swift in Sources */,
+				CC761263289469290066A53C /* NiblessView.swift in Sources */,
+				CCB90D1928997FF700069BB5 /* PickMeUpViewController.swift in Sources */,
+				CCA688E0289AD3A0005F8D75 /* MapAnnotation.swift in Sources */,
+				CC76126A289478960066A53C /* Location.swift in Sources */,
+				CC76125C28945EBF0066A53C /* LaunchViewModel.swift in Sources */,
+				CC76126F289482D60066A53C /* GettingUsersLocationViewModel.swift in Sources */,
+				CC76124B28945A5A0066A53C /* NotSignedInResponder.swift in Sources */,
+				CCA688DB289ACBC1005F8D75 /* Cache.swift in Sources */,
+				CC76125728945B890066A53C /* MainViewController.swift in Sources */,
+				CC76127928948A050066A53C /* Colors.swift in Sources */,
+				CC76125128945AAD0066A53C /* MainView.swift in Sources */,
+				CC76125328945AEC0066A53C /* UserProfile.swift in Sources */,
+				CC76125528945B060066A53C /* RemoteUserSession.swift in Sources */,
+				CC761271289482E30066A53C /* Locator.swift in Sources */,
+				CCB90D332899D51D00069BB5 /* PickMeUpRootViewController.swift in Sources */,
+				CC761273289484190066A53C /* DeterminedPickUpLocationResponder.swift in Sources */,
+				CCB90D1B2899804100069BB5 /* PickMeUpViewModel.swift in Sources */,
+				CCA688E4289AD832005F8D75 /* MapViewModel.swift in Sources */,
+				CCB90D352899DA3800069BB5 /* PickMeUpMapViewController.swift in Sources */,
+				CC76124928945A370066A53C /* SignedInResponder.swift in Sources */,
+				CC76123D289457580066A53C /* MainViewModel.swift in Sources */,
+				CC76123F289457F20066A53C /* SignedInViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC761215289455980066A53C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC9E52252897073E009CCBBB /* SingedInControllerTests.swift in Sources */,
+				CC9E522A28970927009CCBBB /* OnboardingControllerTests.swift in Sources */,
+				CC76121E289455980066A53C /* MVVM_UberTests.swift in Sources */,
+				CC9E52202896FEF7009CCBBB /* Extensions.swift in Sources */,
+				CC9E52232896FF8C009CCBBB /* MainViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC76121B289455980066A53C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC761202289455970066A53C /* MVVM_Uber */;
+			targetProxy = CC76121A289455980066A53C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CC76122B289455980066A53C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC76122C289455980066A53C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC76122E289455980066A53C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GQGZN6D9K9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MVVM_Uber/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.nesslab.com.MVVM-Uber";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC76122F289455980066A53C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GQGZN6D9K9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MVVM_Uber/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.nesslab.com.MVVM-Uber";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CC761231289455980066A53C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GQGZN6D9K9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.nesslab.com.MVVM-UberTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVM_Uber.app/MVVM_Uber";
+			};
+			name = Debug;
+		};
+		CC761232289455980066A53C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GQGZN6D9K9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.nesslab.com.MVVM-UberTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVVM_Uber.app/MVVM_Uber";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC7611FE289455970066A53C /* Build configuration list for PBXProject "MVVM_Uber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC76122B289455980066A53C /* Debug */,
+				CC76122C289455980066A53C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC76122D289455980066A53C /* Build configuration list for PBXNativeTarget "MVVM_Uber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC76122E289455980066A53C /* Debug */,
+				CC76122F289455980066A53C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC761230289455980066A53C /* Build configuration list for PBXNativeTarget "MVVM_UberTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC761231289455980066A53C /* Debug */,
+				CC761232289455980066A53C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC7611FB289455970066A53C /* Project object */;
+}

@@ -41,9 +41,11 @@ example(of: "Just") {
     
 }
 
+/*assign(to:on) -> Enables you to assign  the received value to KVO compliant
+property on an object */
 example(of: "assign(to:on)") {
     // Create a publisher
-    let publisher = ["Hello World!"].publisher
+    let publisher = ["Hello World!", "Hi 2"].publisher
     
     
     // Define a class
@@ -65,30 +67,32 @@ example(of: "assign(to:on)") {
     
 }
 
+/*
+assign(to:) is a variation you can use for republish values emitted by
+a publisher through another property marked with @Published property wrapper
+*/
 example(of: "assign(to:)") {
-    // create a publisher
+    // This is going to be the main publisher
+	// This is the Input
     let publisher = (0..<10).publisher
     
-    // Create an object
-    class SomeObject {
+    // This is going to be the Re-Publisher
+    class Republisher {
         @Published var value = 0
     }
-    // Instantiate object
-    let object = SomeObject()
-    // To see when a value changes inside this object
-    // We can subscribe to its Published value
-    object
+    // Instantiate object Re-Publisher
+    let republisher = Republisher()
+    
+	// Subscribe to the Re-Publisher
+	// This will be the Final Output
+	republisher
         .$value
         .sink {
             print("Received Value: \($0)")
         }.store(in: &subscriptions)
     
-    // Create a subscription
-    // Notice this form fo `assign` doesn't return a cancellable
-    publisher.assign(to: &object.$value)
-    
-    
-    
+    // Connect the Main Publisher with the Re-Publisher
+    publisher.assign(to: &republisher.$value)
     
 }
 //: [Next](@next)

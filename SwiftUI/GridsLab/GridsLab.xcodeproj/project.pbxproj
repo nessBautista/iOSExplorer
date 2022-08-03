@@ -1,0 +1,745 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC035A3E286FADE300A59BAE /* LazyTreeVisualizerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC035A3D286FADE300A59BAE /* LazyTreeVisualizerViewModel.swift */; };
+		CC035A40286FADED00A59BAE /* LazyTreeVisualizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC035A3F286FADED00A59BAE /* LazyTreeVisualizerViewController.swift */; };
+		CC035A42286FADF700A59BAE /* LazyTreeVisualizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC035A41286FADF700A59BAE /* LazyTreeVisualizerView.swift */; };
+		CC048BF62858E99300A12C3A /* Lab2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC048BF52858E99300A12C3A /* Lab2View.swift */; };
+		CC048BF82858E9A800A12C3A /* Lab2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC048BF72858E9A800A12C3A /* Lab2ViewController.swift */; };
+		CC048BFA2858EB6600A12C3A /* Lab2ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC048BF92858EB6600A12C3A /* Lab2ViewModel.swift */; };
+		CC279C862857DD8800260BE9 /* SwiftUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC279C852857DD8800260BE9 /* SwiftUIViewController.swift */; };
+		CC279C892857DEB000260BE9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC279C882857DEB000260BE9 /* MainViewController.swift */; };
+		CC279C8B2857DF2400260BE9 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC279C8A2857DF2400260BE9 /* MainView.swift */; };
+		CC279C8E2857E0B500260BE9 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC279C8D2857E0B500260BE9 /* MainViewModel.swift */; };
+		CC279C902857E22500260BE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC279C8F2857E22500260BE9 /* AppDelegate.swift */; };
+		CC279C932857E61D00260BE9 /* Lab1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC279C922857E61D00260BE9 /* Lab1ViewController.swift */; };
+		CC279C952857E63F00260BE9 /* Lab1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC279C942857E63F00260BE9 /* Lab1View.swift */; };
+		CC48460D27DD224300FF45DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC48460C27DD224300FF45DC /* Assets.xcassets */; };
+		CC48461027DD224300FF45DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC48460F27DD224300FF45DC /* Preview Assets.xcassets */; };
+		CC48461B27DD224400FF45DC /* GridsLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48461A27DD224400FF45DC /* GridsLabTests.swift */; };
+		CC48462627DD224400FF45DC /* GridsLabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48462527DD224400FF45DC /* GridsLabUITests.swift */; };
+		CC48463427DD225B00FF45DC /* VGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48463327DD225B00FF45DC /* VGrid.swift */; };
+		CC48463627DD226600FF45DC /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC48463527DD226600FF45DC /* Models.swift */; };
+		CC4A2F2F286B80290088F30A /* Lab3ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A2F2E286B80290088F30A /* Lab3ViewModel.swift */; };
+		CC4A2F31286B80320088F30A /* Lab3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A2F30286B80320088F30A /* Lab3ViewController.swift */; };
+		CC4A2F33286B803B0088F30A /* Lab3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A2F32286B803B0088F30A /* Lab3View.swift */; };
+		CC4A2F38286BA3A90088F30A /* LazyGridsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A2F37286BA3A90088F30A /* LazyGridsViewController.swift */; };
+		CC4A2F3A286BA3B10088F30A /* LazyGridsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A2F39286BA3B10088F30A /* LazyGridsViewModel.swift */; };
+		CC4A2F3C286BA4CB0088F30A /* FlexibleGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A2F3B286BA4CB0088F30A /* FlexibleGridViewController.swift */; };
+		CC4A2F3E286BA4DE0088F30A /* FlexibleGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A2F3D286BA4DE0088F30A /* FlexibleGridView.swift */; };
+		CC4A2F40286BA4EB0088F30A /* FixedGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A2F3F286BA4EB0088F30A /* FixedGridView.swift */; };
+		CC4A2F42286BA4F60088F30A /* FixedGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4A2F41286BA4F60088F30A /* FixedGridViewController.swift */; };
+		CCB26328286E26FC008CBF60 /* DemoFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB26327286E26FC008CBF60 /* DemoFlowLayout.swift */; };
+		CCB2632A286E3272008CBF60 /* DemoFlowLayoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB26329286E3272008CBF60 /* DemoFlowLayoutViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC48461727DD224400FF45DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC4845FD27DD224300FF45DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC48460427DD224300FF45DC;
+			remoteInfo = GridsLab;
+		};
+		CC48462227DD224400FF45DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC4845FD27DD224300FF45DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC48460427DD224300FF45DC;
+			remoteInfo = GridsLab;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CC035A3D286FADE300A59BAE /* LazyTreeVisualizerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyTreeVisualizerViewModel.swift; sourceTree = "<group>"; };
+		CC035A3F286FADED00A59BAE /* LazyTreeVisualizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyTreeVisualizerViewController.swift; sourceTree = "<group>"; };
+		CC035A41286FADF700A59BAE /* LazyTreeVisualizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyTreeVisualizerView.swift; sourceTree = "<group>"; };
+		CC048BF52858E99300A12C3A /* Lab2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab2View.swift; sourceTree = "<group>"; };
+		CC048BF72858E9A800A12C3A /* Lab2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab2ViewController.swift; sourceTree = "<group>"; };
+		CC048BF92858EB6600A12C3A /* Lab2ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab2ViewModel.swift; sourceTree = "<group>"; };
+		CC279C852857DD8800260BE9 /* SwiftUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewController.swift; sourceTree = "<group>"; };
+		CC279C882857DEB000260BE9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CC279C8A2857DF2400260BE9 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CC279C8D2857E0B500260BE9 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		CC279C8F2857E22500260BE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC279C922857E61D00260BE9 /* Lab1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab1ViewController.swift; sourceTree = "<group>"; };
+		CC279C942857E63F00260BE9 /* Lab1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab1View.swift; sourceTree = "<group>"; };
+		CC48460527DD224300FF45DC /* GridsLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GridsLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC48460C27DD224300FF45DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC48460F27DD224300FF45DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CC48461127DD224300FF45DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC48461627DD224400FF45DC /* GridsLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GridsLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC48461A27DD224400FF45DC /* GridsLabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridsLabTests.swift; sourceTree = "<group>"; };
+		CC48461C27DD224400FF45DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC48462127DD224400FF45DC /* GridsLabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GridsLabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC48462527DD224400FF45DC /* GridsLabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridsLabUITests.swift; sourceTree = "<group>"; };
+		CC48462727DD224400FF45DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC48463327DD225B00FF45DC /* VGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGrid.swift; sourceTree = "<group>"; };
+		CC48463527DD226600FF45DC /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		CC4A2F2E286B80290088F30A /* Lab3ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab3ViewModel.swift; sourceTree = "<group>"; };
+		CC4A2F30286B80320088F30A /* Lab3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab3ViewController.swift; sourceTree = "<group>"; };
+		CC4A2F32286B803B0088F30A /* Lab3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lab3View.swift; sourceTree = "<group>"; };
+		CC4A2F37286BA3A90088F30A /* LazyGridsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyGridsViewController.swift; sourceTree = "<group>"; };
+		CC4A2F39286BA3B10088F30A /* LazyGridsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyGridsViewModel.swift; sourceTree = "<group>"; };
+		CC4A2F3B286BA4CB0088F30A /* FlexibleGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleGridViewController.swift; sourceTree = "<group>"; };
+		CC4A2F3D286BA4DE0088F30A /* FlexibleGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexibleGridView.swift; sourceTree = "<group>"; };
+		CC4A2F3F286BA4EB0088F30A /* FixedGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedGridView.swift; sourceTree = "<group>"; };
+		CC4A2F41286BA4F60088F30A /* FixedGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedGridViewController.swift; sourceTree = "<group>"; };
+		CCB26327286E26FC008CBF60 /* DemoFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoFlowLayout.swift; sourceTree = "<group>"; };
+		CCB26329286E3272008CBF60 /* DemoFlowLayoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoFlowLayoutViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC48460227DD224300FF45DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC48461327DD224400FF45DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC48461E27DD224400FF45DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC035A3C286FADBD00A59BAE /* Lab6 */ = {
+			isa = PBXGroup;
+			children = (
+				CC035A3D286FADE300A59BAE /* LazyTreeVisualizerViewModel.swift */,
+				CC035A3F286FADED00A59BAE /* LazyTreeVisualizerViewController.swift */,
+				CC035A41286FADF700A59BAE /* LazyTreeVisualizerView.swift */,
+			);
+			path = Lab6;
+			sourceTree = "<group>";
+		};
+		CC048BF42858E98300A12C3A /* Lab2 */ = {
+			isa = PBXGroup;
+			children = (
+				CC048BF52858E99300A12C3A /* Lab2View.swift */,
+				CC048BF72858E9A800A12C3A /* Lab2ViewController.swift */,
+				CC048BF92858EB6600A12C3A /* Lab2ViewModel.swift */,
+			);
+			path = Lab2;
+			sourceTree = "<group>";
+		};
+		CC279C872857DE7400260BE9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CC279C852857DD8800260BE9 /* SwiftUIViewController.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CC279C8C2857E07300260BE9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CC279C882857DEB000260BE9 /* MainViewController.swift */,
+				CC279C8A2857DF2400260BE9 /* MainView.swift */,
+				CC279C8D2857E0B500260BE9 /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CC279C912857E4CF00260BE9 /* Lab1 */ = {
+			isa = PBXGroup;
+			children = (
+				CC279C922857E61D00260BE9 /* Lab1ViewController.swift */,
+				CC279C942857E63F00260BE9 /* Lab1View.swift */,
+			);
+			path = Lab1;
+			sourceTree = "<group>";
+		};
+		CC4845FC27DD224300FF45DC = {
+			isa = PBXGroup;
+			children = (
+				CC48460727DD224300FF45DC /* GridsLab */,
+				CC48461927DD224400FF45DC /* GridsLabTests */,
+				CC48462427DD224400FF45DC /* GridsLabUITests */,
+				CC48460627DD224300FF45DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CC48460627DD224300FF45DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC48460527DD224300FF45DC /* GridsLab.app */,
+				CC48461627DD224400FF45DC /* GridsLabTests.xctest */,
+				CC48462127DD224400FF45DC /* GridsLabUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC48460727DD224300FF45DC /* GridsLab */ = {
+			isa = PBXGroup;
+			children = (
+				CC035A3C286FADBD00A59BAE /* Lab6 */,
+				CCB26326286E26E4008CBF60 /* Lab5 */,
+				CC4A2F34286BA3590088F30A /* Lab4 */,
+				CC279C872857DE7400260BE9 /* Utilities */,
+				CC4A2F2D286B80130088F30A /* Lab3 */,
+				CC048BF42858E98300A12C3A /* Lab2 */,
+				CC279C912857E4CF00260BE9 /* Lab1 */,
+				CC279C8C2857E07300260BE9 /* Main */,
+				CC48463327DD225B00FF45DC /* VGrid.swift */,
+				CC48460C27DD224300FF45DC /* Assets.xcassets */,
+				CC48461127DD224300FF45DC /* Info.plist */,
+				CC48460E27DD224300FF45DC /* Preview Content */,
+				CC48463527DD226600FF45DC /* Models.swift */,
+				CC279C8F2857E22500260BE9 /* AppDelegate.swift */,
+			);
+			path = GridsLab;
+			sourceTree = "<group>";
+		};
+		CC48460E27DD224300FF45DC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CC48460F27DD224300FF45DC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CC48461927DD224400FF45DC /* GridsLabTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC48461A27DD224400FF45DC /* GridsLabTests.swift */,
+				CC48461C27DD224400FF45DC /* Info.plist */,
+			);
+			path = GridsLabTests;
+			sourceTree = "<group>";
+		};
+		CC48462427DD224400FF45DC /* GridsLabUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC48462527DD224400FF45DC /* GridsLabUITests.swift */,
+				CC48462727DD224400FF45DC /* Info.plist */,
+			);
+			path = GridsLabUITests;
+			sourceTree = "<group>";
+		};
+		CC4A2F2D286B80130088F30A /* Lab3 */ = {
+			isa = PBXGroup;
+			children = (
+				CC4A2F2E286B80290088F30A /* Lab3ViewModel.swift */,
+				CC4A2F30286B80320088F30A /* Lab3ViewController.swift */,
+				CC4A2F32286B803B0088F30A /* Lab3View.swift */,
+			);
+			path = Lab3;
+			sourceTree = "<group>";
+		};
+		CC4A2F34286BA3590088F30A /* Lab4 */ = {
+			isa = PBXGroup;
+			children = (
+				CC4A2F37286BA3A90088F30A /* LazyGridsViewController.swift */,
+				CC4A2F39286BA3B10088F30A /* LazyGridsViewModel.swift */,
+				CC4A2F3B286BA4CB0088F30A /* FlexibleGridViewController.swift */,
+				CC4A2F3F286BA4EB0088F30A /* FixedGridView.swift */,
+				CC4A2F41286BA4F60088F30A /* FixedGridViewController.swift */,
+				CC4A2F3D286BA4DE0088F30A /* FlexibleGridView.swift */,
+			);
+			path = Lab4;
+			sourceTree = "<group>";
+		};
+		CCB26326286E26E4008CBF60 /* Lab5 */ = {
+			isa = PBXGroup;
+			children = (
+				CCB26327286E26FC008CBF60 /* DemoFlowLayout.swift */,
+				CCB26329286E3272008CBF60 /* DemoFlowLayoutViewModel.swift */,
+			);
+			path = Lab5;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC48460427DD224300FF45DC /* GridsLab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC48462A27DD224400FF45DC /* Build configuration list for PBXNativeTarget "GridsLab" */;
+			buildPhases = (
+				CC48460127DD224300FF45DC /* Sources */,
+				CC48460227DD224300FF45DC /* Frameworks */,
+				CC48460327DD224300FF45DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GridsLab;
+			productName = GridsLab;
+			productReference = CC48460527DD224300FF45DC /* GridsLab.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC48461527DD224400FF45DC /* GridsLabTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC48462D27DD224400FF45DC /* Build configuration list for PBXNativeTarget "GridsLabTests" */;
+			buildPhases = (
+				CC48461227DD224400FF45DC /* Sources */,
+				CC48461327DD224400FF45DC /* Frameworks */,
+				CC48461427DD224400FF45DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC48461827DD224400FF45DC /* PBXTargetDependency */,
+			);
+			name = GridsLabTests;
+			productName = GridsLabTests;
+			productReference = CC48461627DD224400FF45DC /* GridsLabTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC48462027DD224400FF45DC /* GridsLabUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC48463027DD224400FF45DC /* Build configuration list for PBXNativeTarget "GridsLabUITests" */;
+			buildPhases = (
+				CC48461D27DD224400FF45DC /* Sources */,
+				CC48461E27DD224400FF45DC /* Frameworks */,
+				CC48461F27DD224400FF45DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC48462327DD224400FF45DC /* PBXTargetDependency */,
+			);
+			name = GridsLabUITests;
+			productName = GridsLabUITests;
+			productReference = CC48462127DD224400FF45DC /* GridsLabUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC4845FD27DD224300FF45DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					CC48460427DD224300FF45DC = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					CC48461527DD224400FF45DC = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = CC48460427DD224300FF45DC;
+					};
+					CC48462027DD224400FF45DC = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = CC48460427DD224300FF45DC;
+					};
+				};
+			};
+			buildConfigurationList = CC48460027DD224300FF45DC /* Build configuration list for PBXProject "GridsLab" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC4845FC27DD224300FF45DC;
+			productRefGroup = CC48460627DD224300FF45DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC48460427DD224300FF45DC /* GridsLab */,
+				CC48461527DD224400FF45DC /* GridsLabTests */,
+				CC48462027DD224400FF45DC /* GridsLabUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC48460327DD224300FF45DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC48461027DD224300FF45DC /* Preview Assets.xcassets in Resources */,
+				CC48460D27DD224300FF45DC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC48461427DD224400FF45DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC48461F27DD224400FF45DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC48460127DD224300FF45DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC4A2F3A286BA3B10088F30A /* LazyGridsViewModel.swift in Sources */,
+				CC4A2F38286BA3A90088F30A /* LazyGridsViewController.swift in Sources */,
+				CC035A3E286FADE300A59BAE /* LazyTreeVisualizerViewModel.swift in Sources */,
+				CC279C8B2857DF2400260BE9 /* MainView.swift in Sources */,
+				CC4A2F3E286BA4DE0088F30A /* FlexibleGridView.swift in Sources */,
+				CC48463427DD225B00FF45DC /* VGrid.swift in Sources */,
+				CC035A42286FADF700A59BAE /* LazyTreeVisualizerView.swift in Sources */,
+				CC048BF82858E9A800A12C3A /* Lab2ViewController.swift in Sources */,
+				CC048BFA2858EB6600A12C3A /* Lab2ViewModel.swift in Sources */,
+				CC4A2F31286B80320088F30A /* Lab3ViewController.swift in Sources */,
+				CC279C932857E61D00260BE9 /* Lab1ViewController.swift in Sources */,
+				CC279C892857DEB000260BE9 /* MainViewController.swift in Sources */,
+				CC48463627DD226600FF45DC /* Models.swift in Sources */,
+				CC279C902857E22500260BE9 /* AppDelegate.swift in Sources */,
+				CC279C862857DD8800260BE9 /* SwiftUIViewController.swift in Sources */,
+				CC048BF62858E99300A12C3A /* Lab2View.swift in Sources */,
+				CC4A2F33286B803B0088F30A /* Lab3View.swift in Sources */,
+				CC035A40286FADED00A59BAE /* LazyTreeVisualizerViewController.swift in Sources */,
+				CC4A2F42286BA4F60088F30A /* FixedGridViewController.swift in Sources */,
+				CCB26328286E26FC008CBF60 /* DemoFlowLayout.swift in Sources */,
+				CC4A2F40286BA4EB0088F30A /* FixedGridView.swift in Sources */,
+				CC4A2F3C286BA4CB0088F30A /* FlexibleGridViewController.swift in Sources */,
+				CC279C8E2857E0B500260BE9 /* MainViewModel.swift in Sources */,
+				CC279C952857E63F00260BE9 /* Lab1View.swift in Sources */,
+				CC4A2F2F286B80290088F30A /* Lab3ViewModel.swift in Sources */,
+				CCB2632A286E3272008CBF60 /* DemoFlowLayoutViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC48461227DD224400FF45DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC48461B27DD224400FF45DC /* GridsLabTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC48461D27DD224400FF45DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC48462627DD224400FF45DC /* GridsLabUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC48461827DD224400FF45DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC48460427DD224300FF45DC /* GridsLab */;
+			targetProxy = CC48461727DD224400FF45DC /* PBXContainerItemProxy */;
+		};
+		CC48462327DD224400FF45DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC48460427DD224300FF45DC /* GridsLab */;
+			targetProxy = CC48462227DD224400FF45DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CC48462827DD224400FF45DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CC48462927DD224400FF45DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC48462B27DD224400FF45DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"GridsLab/Preview Content\"";
+				DEVELOPMENT_TEAM = GQGZN6D9K9;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = GridsLab/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.nesslab.com.GridsLab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC48462C27DD224400FF45DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"GridsLab/Preview Content\"";
+				DEVELOPMENT_TEAM = GQGZN6D9K9;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = GridsLab/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.nesslab.com.GridsLab;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CC48462E27DD224400FF45DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQGZN6D9K9;
+				INFOPLIST_FILE = GridsLabTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.nesslab.com.GridsLabTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GridsLab.app/GridsLab";
+			};
+			name = Debug;
+		};
+		CC48462F27DD224400FF45DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQGZN6D9K9;
+				INFOPLIST_FILE = GridsLabTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.nesslab.com.GridsLabTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GridsLab.app/GridsLab";
+			};
+			name = Release;
+		};
+		CC48463127DD224400FF45DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQGZN6D9K9;
+				INFOPLIST_FILE = GridsLabUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.nesslab.com.GridsLabUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GridsLab;
+			};
+			name = Debug;
+		};
+		CC48463227DD224400FF45DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GQGZN6D9K9;
+				INFOPLIST_FILE = GridsLabUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.nesslab.com.GridsLabUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GridsLab;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC48460027DD224300FF45DC /* Build configuration list for PBXProject "GridsLab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC48462827DD224400FF45DC /* Debug */,
+				CC48462927DD224400FF45DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC48462A27DD224400FF45DC /* Build configuration list for PBXNativeTarget "GridsLab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC48462B27DD224400FF45DC /* Debug */,
+				CC48462C27DD224400FF45DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC48462D27DD224400FF45DC /* Build configuration list for PBXNativeTarget "GridsLabTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC48462E27DD224400FF45DC /* Debug */,
+				CC48462F27DD224400FF45DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC48463027DD224400FF45DC /* Build configuration list for PBXNativeTarget "GridsLabUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC48463127DD224400FF45DC /* Debug */,
+				CC48463227DD224400FF45DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC4845FD27DD224300FF45DC /* Project object */;
+}

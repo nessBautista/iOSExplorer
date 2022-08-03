@@ -3,5 +3,12 @@
     <pages>
         <page name='overview'/>
         <page name='Publishers'/>
+        <page name='Networking'/>
+        <page name='Subjects'/>
+        <page name='CombiningOperators'/>
+        <page name='AllSatisfy'/>
+        <page name='CustomSubscribers'/>
+        <page name='Network_02'/>
+        <page name='Filtering'/>
     </pages>
 </playground>
